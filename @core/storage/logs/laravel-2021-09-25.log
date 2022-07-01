@@ -154,7 +154,8 @@
 #39 E:\\xampp\\htdocs\\fundorex-v1.1.0\\index.php(72): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #40 {main}
 "} 
-[2021-09-25 04:27:12] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'xgenxchi_robin'@'localhost' (using password: YES) (SQL: select * from `static_options` where `option_name` = site_meta_description limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\errors\500.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'xgenxchi_robin'@'localhost' (using password: YES) (SQL: select * from `static_options` where `option_name` = site_meta_description limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views\\errors\\500.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
+[2021-09-25 04:27:12] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'xgenxchi_robin'@'localhost' (using password: YES) (SQL: select * from `static_options` where `option_name` = site_meta_description limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\errors\500.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'xgenxchi_robin'@'localhost' (using password: YES) (SQL: select * from `static_options` where `option_name` = site_meta_description limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views\\errors\\500.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
 [stacktrace]
 #0 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
 #1 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
@@ -170,7 +171,8 @@
 #11 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\CacheManager.php(418): Illuminate\\Cache\\Repository->remember('site_meta_descr...', 86400, Object(Closure))
 #12 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Cache\\CacheManager->__call('remember', Array)
 #13 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(109): Illuminate\\Support\\Facades\\Facade::__callStatic('remember', Array)
-#14 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views/errors/500.blade.php(9): get_static_option('site_meta_descr...')
+#14 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views/errors/500.blade.php(9): get_static_option('site_meta_descr...')
 #15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('E:\\\\xampp\\\\htdocs...')
 #16 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
 #17 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('E:\\\\xampp\\\\htdocs...', Array)
@@ -336,7 +338,8 @@ Stack trace:
 #39 E:\\xampp\\htdocs\\fundorex-v1.1.0\\index.php(72): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #40 {main}
 "} 
-[2021-09-25 07:26:13] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\errors\500.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views\\errors\\500.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
+[2021-09-25 07:26:13] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\errors\500.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views\\errors\\500.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
 [stacktrace]
 #0 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
 #1 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
@@ -353,7 +356,8 @@ Stack trace:
 #12 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2121): Illuminate\\Database\\Eloquent\\Model->__call('find', Array)
 #13 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(258): Illuminate\\Database\\Eloquent\\Model::__callStatic('find', Array)
 #14 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(249): get_attachment_image_by_id('125', 'full', false)
-#15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views/errors/500.blade.php(14): render_favicon_by_id('125')
+#15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views/errors/500.blade.php(14): render_favicon_by_id('125')
 #16 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('E:\\\\xampp\\\\htdocs...')
 #17 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
 #18 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('E:\\\\xampp\\\\htdocs...', Array)
@@ -529,7 +533,8 @@ Stack trace:
 #66 E:\\xampp\\htdocs\\fundorex-v1.1.0\\index.php(72): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #67 {main}
 "} 
-[2021-09-25 07:26:13] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\errors\500.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views\\errors\\500.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
+[2021-09-25 07:26:13] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\errors\500.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views\\errors\\500.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
 [stacktrace]
 #0 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
 #1 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
@@ -546,7 +551,8 @@ Stack trace:
 #12 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2121): Illuminate\\Database\\Eloquent\\Model->__call('find', Array)
 #13 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(258): Illuminate\\Database\\Eloquent\\Model::__callStatic('find', Array)
 #14 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(249): get_attachment_image_by_id('125', 'full', false)
-#15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views/errors/500.blade.php(14): render_favicon_by_id('125')
+#15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views/errors/500.blade.php(14): render_favicon_by_id('125')
 #16 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('E:\\\\xampp\\\\htdocs...')
 #17 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
 #18 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('E:\\\\xampp\\\\htdocs...', Array)
@@ -701,7 +707,8 @@ Stack trace:
 #59 E:\\xampp\\htdocs\\fundorex-v1.1.0\\index.php(72): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #60 {main}
 "} 
-[2021-09-25 07:26:13] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\errors\500.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views\\errors\\500.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
+[2021-09-25 07:26:13] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\errors\500.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views\\errors\\500.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
 [stacktrace]
 #0 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
 #1 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
@@ -718,7 +725,8 @@ Stack trace:
 #12 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2121): Illuminate\\Database\\Eloquent\\Model->__call('find', Array)
 #13 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(258): Illuminate\\Database\\Eloquent\\Model::__callStatic('find', Array)
 #14 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(249): get_attachment_image_by_id('125', 'full', false)
-#15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views/errors/500.blade.php(14): render_favicon_by_id('125')
+#15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views/errors/500.blade.php(14): render_favicon_by_id('125')
 #16 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('E:\\\\xampp\\\\htdocs...')
 #17 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
 #18 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('E:\\\\xampp\\\\htdocs...', Array)
@@ -864,7 +872,8 @@ Stack trace:
 #56 E:\\xampp\\htdocs\\fundorex-v1.1.0\\index.php(72): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #57 {main}
 "} 
-[2021-09-25 07:26:13] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\errors\500.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views\\errors\\500.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
+[2021-09-25 07:26:13] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\errors\500.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views\\errors\\500.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
 [stacktrace]
 #0 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
 #1 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
@@ -881,7 +890,8 @@ Stack trace:
 #12 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2121): Illuminate\\Database\\Eloquent\\Model->__call('find', Array)
 #13 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(258): Illuminate\\Database\\Eloquent\\Model::__callStatic('find', Array)
 #14 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(249): get_attachment_image_by_id('125', 'full', false)
-#15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views/errors/500.blade.php(14): render_favicon_by_id('125')
+#15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views/errors/500.blade.php(14): render_favicon_by_id('125')
 #16 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('E:\\\\xampp\\\\htdocs...')
 #17 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
 #18 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('E:\\\\xampp\\\\htdocs...', Array)
@@ -1018,7 +1028,8 @@ Stack trace:
 #53 E:\\xampp\\htdocs\\fundorex-v1.1.0\\index.php(72): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #54 {main}
 "} 
-[2021-09-25 07:26:13] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\errors\500.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views\\errors\\500.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
+[2021-09-25 07:26:13] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\errors\500.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views\\errors\\500.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
 [stacktrace]
 #0 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
 #1 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
@@ -1035,7 +1046,8 @@ Stack trace:
 #12 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2121): Illuminate\\Database\\Eloquent\\Model->__call('find', Array)
 #13 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(258): Illuminate\\Database\\Eloquent\\Model::__callStatic('find', Array)
 #14 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(249): get_attachment_image_by_id('125', 'full', false)
-#15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views/errors/500.blade.php(14): render_favicon_by_id('125')
+#15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views/errors/500.blade.php(14): render_favicon_by_id('125')
 #16 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('E:\\\\xampp\\\\htdocs...')
 #17 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
 #18 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('E:\\\\xampp\\\\htdocs...', Array)
@@ -1166,7 +1178,8 @@ Stack trace:
 #51 E:\\xampp\\htdocs\\fundorex-v1.1.0\\index.php(72): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #52 {main}
 "} 
-[2021-09-25 07:26:13] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\errors\500.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views\\errors\\500.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
+[2021-09-25 07:26:13] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\errors\500.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views\\errors\\500.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
 [stacktrace]
 #0 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
 #1 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
@@ -1183,7 +1196,8 @@ Stack trace:
 #12 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2121): Illuminate\\Database\\Eloquent\\Model->__call('find', Array)
 #13 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(258): Illuminate\\Database\\Eloquent\\Model::__callStatic('find', Array)
 #14 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(249): get_attachment_image_by_id('125', 'full', false)
-#15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views/errors/500.blade.php(14): render_favicon_by_id('125')
+#15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views/errors/500.blade.php(14): render_favicon_by_id('125')
 #16 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('E:\\\\xampp\\\\htdocs...')
 #17 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
 #18 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('E:\\\\xampp\\\\htdocs...', Array)
@@ -1308,7 +1322,8 @@ Stack trace:
 #49 E:\\xampp\\htdocs\\fundorex-v1.1.0\\index.php(72): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #50 {main}
 "} 
-[2021-09-25 07:26:14] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\errors\500.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views\\errors\\500.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
+[2021-09-25 07:26:14] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\errors\500.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views\\errors\\500.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
 [stacktrace]
 #0 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
 #1 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
@@ -1325,7 +1340,8 @@ Stack trace:
 #12 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2121): Illuminate\\Database\\Eloquent\\Model->__call('find', Array)
 #13 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(258): Illuminate\\Database\\Eloquent\\Model::__callStatic('find', Array)
 #14 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(249): get_attachment_image_by_id('125', 'full', false)
-#15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views/errors/500.blade.php(14): render_favicon_by_id('125')
+#15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views/errors/500.blade.php(14): render_favicon_by_id('125')
 #16 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('E:\\\\xampp\\\\htdocs...')
 #17 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
 #18 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('E:\\\\xampp\\\\htdocs...', Array)
@@ -1444,7 +1460,8 @@ Stack trace:
 #47 E:\\xampp\\htdocs\\fundorex-v1.1.0\\index.php(72): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #48 {main}
 "} 
-[2021-09-25 07:26:14] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\errors\500.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views\\errors\\500.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
+[2021-09-25 07:26:14] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\errors\500.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views\\errors\\500.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
 [stacktrace]
 #0 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
 #1 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
@@ -1461,7 +1478,8 @@ Stack trace:
 #12 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2121): Illuminate\\Database\\Eloquent\\Model->__call('find', Array)
 #13 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(258): Illuminate\\Database\\Eloquent\\Model::__callStatic('find', Array)
 #14 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(249): get_attachment_image_by_id('125', 'full', false)
-#15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views/errors/500.blade.php(14): render_favicon_by_id('125')
+#15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views/errors/500.blade.php(14): render_favicon_by_id('125')
 #16 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('E:\\\\xampp\\\\htdocs...')
 #17 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
 #18 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('E:\\\\xampp\\\\htdocs...', Array)
@@ -1585,7 +1603,8 @@ Stack trace:
 [stacktrace]
 #0 {main}
 "} 
-[2021-09-25 08:44:08] production.ERROR: array_search() expects at least 2 parameters, 1 given (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\frontend\donations\donation-single.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views/frontend/donations/donation-single.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-1533608879 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#1056</a><samp data-depth=1 class=sf-dump-expanded>
+[2021-09-25 08:44:08] production.ERROR: array_search() expects at least 2 parameters, 1 given (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\frontend\donations\donation-single.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views/frontend/donations/donation-single.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-1533608879 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#1056</a><samp data-depth=1 class=sf-dump-expanded>
   #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
 </samp>}
 </pre><script>Sfdump(\"sf-dump-1533608879\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
@@ -2236,7 +2255,7 @@ Stack trace:
       #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
       #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
       #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
-      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-Altdreamst>null</span>
       #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
       #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
       #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
@@ -2805,10 +2824,13 @@ Stack trace:
   </samp>]
 </samp>}
 </pre><script>Sfdump(\"sf-dump-895303441\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
-"}},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): array_search() expects at least 2 parameters, 1 given (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views\\frontend\\donations\\donation-single.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views/frontend/donations/donation-single.blade.php:166)
+"}},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): array_search() expects at least 2 parameters, 1 given (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views\\frontend\\donations\\donation-single.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views/frontend/donations/donation-single.blade.php:166)
 [stacktrace]
 #0 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'array_search() ...', 'E:\\\\xampp\\\\htdocs...', 195, Array)
-#1 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views/frontend/donations/donation-single.blade.php(166): array_search(Array)
+#1 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views/frontend/donations/donation-single.blade.php(166): array_search(Array)
 #2 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('E:\\\\xampp\\\\htdocs...')
 #3 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
 #4 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('E:\\\\xampp\\\\htdocs...', Array)
@@ -2929,7 +2951,8 @@ Stack trace:
 #57 E:\\xampp\\htdocs\\fundorex-v1.1.0\\index.php(72): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2021-09-25 08:44:39] production.ERROR: array_search() expects at least 2 parameters, 1 given (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\frontend\donations\donation-single.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views/frontend/donations/donation-single.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-1527733435 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#1056</a><samp data-depth=1 class=sf-dump-expanded>
+[2021-09-25 08:44:39] production.ERROR: array_search() expects at least 2 parameters, 1 given (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\frontend\donations\donation-single.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views/frontend/donations/donation-single.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-1527733435 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#1056</a><samp data-depth=1 class=sf-dump-expanded>
   #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
 </samp>}
 </pre><script>Sfdump(\"sf-dump-1527733435\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
@@ -3576,7 +3599,7 @@ Stack trace:
       +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
       #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:28</span> [ &hellip;28]
       #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:28</span> [ &hellip;28]
-      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []Altdream
       #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
       #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
       #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
@@ -4149,10 +4172,13 @@ Stack trace:
   </samp>]
 </samp>}
 </pre><script>Sfdump(\"sf-dump-1574136920\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
-"}},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): array_search() expects at least 2 parameters, 1 given (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views\\frontend\\donations\\donation-single.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views/frontend/donations/donation-single.blade.php:166)
+"}},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): array_search() expects at least 2 parameters, 1 given (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views\\frontend\\donations\\donation-single.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views/frontend/donations/donation-single.blade.php:166)
 [stacktrace]
 #0 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'array_search() ...', 'E:\\\\xampp\\\\htdocs...', 195, Array)
-#1 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views/frontend/donations/donation-single.blade.php(166): array_search(Array)
+#1 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views/frontend/donations/donation-single.blade.php(166): array_search(Array)
 #2 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('E:\\\\xampp\\\\htdocs...')
 #3 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
 #4 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('E:\\\\xampp\\\\htdocs...', Array)
@@ -4311,7 +4337,8 @@ Stack trace:
 #33 E:\\xampp\\htdocs\\fundorex-v1.1.0\\index.php(72): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #34 {main}
 "} 
-[2021-09-25 12:54:49] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\frontend\pages\404.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views\\frontend\\pages\\404.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
+[2021-09-25 12:54:49] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\xampp\htdocs\fundorex-v1.1.0\@core\resources\views\frontend\pages\404.blade.php) {"view":{"view":"E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `media_uploads` where `media_uploads`.`id` = 125 limit 1) (View: E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views\\frontend\\pages\\404.blade.php) at E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
 [stacktrace]
 #0 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
 #1 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
@@ -4328,7 +4355,8 @@ Stack trace:
 #12 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2121): Illuminate\\Database\\Eloquent\\Model->__call('find', Array)
 #13 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(258): Illuminate\\Database\\Eloquent\\Model::__callStatic('find', Array)
 #14 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\app\\Helpers\\helpers.php(249): get_attachment_image_by_id('125', 'full', false)
-#15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\esources\\views/frontend/pages/404.blade.php(14): render_favicon_by_id('125')
+#15 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\
+esources\\views/frontend/pages/404.blade.php(14): render_favicon_by_id('125')
 #16 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('E:\\\\xampp\\\\htdocs...')
 #17 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
 #18 E:\\xampp\\htdocs\\fundorex-v1.1.0\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('E:\\\\xampp\\\\htdocs...', Array)

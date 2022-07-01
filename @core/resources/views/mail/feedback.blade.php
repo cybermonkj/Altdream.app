@@ -115,7 +115,7 @@
         </a>
     </div>
     <div class="inner-wrap">
-        <p>{{__('You Have Message From').' '. get_static_option('site_title')}}</p>
+        <p>{{__('You Have a Message From').' '. get_static_option('site_title')}}</p>
         <table>
             <tr>
                 <td>{{get_static_option('feedback_page_form_name_label')}}</td>

@@ -1,6 +1,6 @@
 @extends('frontend.frontend-page-master')
 @section('page-title')
-    {{__('Order Confirm')}}
+    {{__('Order Confirmation')}}
 @endsection
 @section('content')
     <div class="error-page-content padding-120">
@@ -8,7 +8,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="order-confirm-area">
-                        <h4 class="title">{{__('Order Details')}}</h4>
+                        <h4 class="title">{{__('Payment Details')}}</h4>
                         @if($errors->any())
                             <ul class="alert alert-danger">
                                 @foreach($errors->all() as $error)
@@ -46,21 +46,21 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>{{__('Package Name')}}</td>
+                                    <td>{{__('Item Name')}}</td>
                                     <td>{{$order_details->package_name}}</td>
                                 </tr>
                                 <tr>
-                                    <td>{{__('Package Price')}}</td>
+                                    <td>{{__('Price')}}</td>
                                     <td>
                                         <strong>{{amount_with_currency_symbol($order_details->package_price)}}</strong>
                                         @if(!check_currency_support_by_payment_gateway($payment_gateway))
                                             <br>
-                                            <small>{{__('You will charge in '.get_charge_currency($payment_gateway).', you have to pay'. ' ')}} <strong>{{get_charge_amount($order_details->package_price,$payment_gateway).get_charge_currency($payment_gateway)}}</strong></small>
+                                            <small>{{__('You will be charged in '.get_charge_currency($payment_gateway).', you have to pay'. ' ')}} <strong>{{get_charge_amount($order_details->package_price,$payment_gateway).get_charge_currency($payment_gateway)}}</strong></small>
                                         @endif
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>{{__('Payment Gateway')}}</td>
+                                    <td>{{__('Payment Processor')}}</td>
                                     <td class="text-capitalize">
                                         @if($payment_gateway == 'manual_payment')
                                             {{get_static_option('site_manual_payment_name')}}

@@ -190,7 +190,7 @@
                     <td>{{amount_with_currency_symbol($payment_log->event_cost,true)}}</td>
                 </tr>
                 <tr>
-                    <th>{{__('Payment Gateway')}}</th>
+                    <th>{{__('Payment Processor')}}</th>
                     <td>{{str_replace('_',' ',$payment_log->package_gateway)}}</td>
                 </tr>
                 <tr>

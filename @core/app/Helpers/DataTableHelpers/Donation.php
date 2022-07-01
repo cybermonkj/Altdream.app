@@ -26,7 +26,7 @@ class Donation
         $output .= '</li>';
 
         if ($row->created_by === 'user' && !empty($row->withdraws)) {
-            $output .= '<li><strong>' . __('Withdraw') . ':</strong> ' . amount_with_currency_symbol($row->withdraws->where('payment_status', 'approved')->pluck('withdraw_request_amount')->sum()) . '</li>';
+            $output .= '<li><strong>' . __('Withdrawal') . ':</strong> ' . amount_with_currency_symbol($row->withdraws->where('payment_status', 'approved')->pluck('withdraw_request_amount')->sum()) . '</li>';
 
             $withdraw_able_amount_without_admin_charge =$row->raised - optional($row->withdraws)->where('payment_status', 'approved')->pluck('withdraw_request_amount')->sum();
             $charge_text = '';
@@ -36,10 +36,10 @@ class Donation
                 $output .= '<li><strong>'.__('Admin Charged From This Campaign').': </strong> '.amount_with_currency_symbol( DonationHelpers::get_donation_charge_for_campaign_owner($withdraw_able_amount_without_admin_charge)).'</li>';
                 $withdraw_able_amount_without_admin_charge -= DonationHelpers::get_donation_charge_for_campaign_owner($withdraw_able_amount_without_admin_charge);
             }
-            $output .= '<li><strong>'.__('Available For Withdraw ').' '.$charge_text.': </strong> '.amount_with_currency_symbol($withdraw_able_amount_without_admin_charge).'</li>';
+            $output .= '<li><strong>'.__('Available For Withdrawal ').' '.$charge_text.': </strong> '.amount_with_currency_symbol($withdraw_able_amount_without_admin_charge).'</li>';
 
 
-            $output .= '<li><strong>' . __('Pending Withdraw Request') . ':</strong> ' . amount_with_currency_symbol($row->withdraws->where('payment_status', 'pending')->pluck('withdraw_request_amount')->sum()) . '</li>';
+            $output .= '<li><strong>' . __('Pending Withdrawal Request') . ':</strong> ' . amount_with_currency_symbol($row->withdraws->where('payment_status', 'pending')->pluck('withdraw_request_amount')->sum()) . '</li>';
         }
         $output .= ' <li class="donation-status"><strong>' . __('Status') . ':</strong> ' . $row->status . '</li>';
         $output .= '</ul>';
@@ -92,7 +92,7 @@ HTML;
         $output .= '<li><strong>'.__('Email').': </strong> '.purify_html($row->email).'</li>';
         $output .= '<li><strong>'.__('Amount').': </strong> '.amount_with_currency_symbol($row->amount).'</li>';
         $output .= '<li><strong>'.__('Admin Charge').': </strong> '.amount_with_currency_symbol($row->admin_charge).'</li>';
-        $output .= '<li><strong>'.__('Payment Gateway').': </strong> '.ucwords(str_replace('_',' ',$row->payment_gateway)).'</li>';
+        $output .= '<li><strong>'.__('Payment Processor').': </strong> '.ucwords(str_replace('_',' ',$row->payment_gateway)).'</li>';
         if ($row->status === 'complete' && $row->payment_gateway != 'manual_payment'){
             $output .= '<li><strong>'.__('Transaction ID').': </strong> '.$row->transaction_id.'</li>';
         }
@@ -114,11 +114,11 @@ HTML;
                 $output .= '<li><strong>'.__('Admin Charged From This Campaign').': </strong> '.amount_with_currency_symbol( DonationHelpers::get_donation_charge_for_campaign_owner($withdraw_able_amount_without_admin_charge)).'</li>';
                 $withdraw_able_amount_without_admin_charge -= DonationHelpers::get_donation_charge_for_campaign_owner($withdraw_able_amount_without_admin_charge);
             }
-            $output .= '<li><strong>'.__('Available For Withdraw Amount').' '.$charge_text.': </strong> '.amount_with_currency_symbol($withdraw_able_amount_without_admin_charge).'</li>';
+            $output .= '<li><strong>'.__('Available For Withdrawal Amount').' '.$charge_text.': </strong> '.amount_with_currency_symbol($withdraw_able_amount_without_admin_charge).'</li>';
         }
 
-        $output .= '<li><strong>'.__('Requested Withdraw Amount').': </strong> '.amount_with_currency_symbol($row->withdraw_request_amount).'</li>';
-        $output .= '<li><strong>'.__('Payment Gateway').': </strong> '.ucwords(str_replace('_',' ',$row->payment_gateway)).'</li>';
+        $output .= '<li><strong>'.__('Requested Withdrawal Amount').': </strong> '.amount_with_currency_symbol($row->withdraw_request_amount).'</li>';
+        $output .= '<li><strong>'.__('Payment Processor').': </strong> '.ucwords(str_replace('_',' ',$row->payment_gateway)).'</li>';
         $output .= '<li><strong>'.__('Payment Status').': </strong> '.$row->payment_status.'</li>';
         $output .= '<li><strong>'.__('Date').': </strong> '.date_format($row->created_at,'d M Y').'</li>';
         if($row->payment_status === 'approved'){

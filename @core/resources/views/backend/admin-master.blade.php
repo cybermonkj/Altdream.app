@@ -53,11 +53,11 @@
 
 <body>
 <!-- preloader area start -->
-@if(!empty(get_static_option('admin_loader_animation')))
+<!-- @if(!empty(get_static_option('admin_loader_animation')))
 <div id="preloader">
     <div class="loader"></div>
 </div>
-@endif
+@endif -->
 <!-- preloader area end -->
 <!-- page container area start -->
 <div class="page-container">
@@ -80,12 +80,12 @@
                 <!-- profile info & task notification -->
                 <div class="col-md-6 col-sm-4 clearfix">
                     <ul class="notification-area pull-right">
-                        <li ><label class="switch yes">
+                        <!-- <li ><label class="switch yes">
                             <input id="darkmode" type="checkbox" data-mode={{ get_static_option('site_admin_dark_mode') }} @if(get_static_option('site_admin_dark_mode') == 'on') checked @else @endif>
                             <span class="slider-color-mode onff"></span>
-                        </label></li>
-                        <li id="full-view"><i class="ti-fullscreen"></i></li>
-                        <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
+                        </label></li> -->
+                        <!-- <li id="full-view"><i class="ti-fullscreen"></i></li>
+                        <li id="full-view-exit"><i class="ti-zoom-out"></i></li> -->
                         <li><a class="btn @if(get_static_option('site_admin_dark_mode') == 'off')btn-primary @else btn-dark  @endif" target="_blank" href="{{url('/')}}"><i class="fas fa-external-link-alt mr-1"></i>   {{__('View Site')}} </a></li>
                     </ul>
                 </div>
@@ -114,7 +114,7 @@
                      <h4 class="user-name dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }} <i class="fa fa-angle-down"></i></h4>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{{route('admin.profile.update')}}">{{__('Edit Profile')}}</a>
-                            <a class="dropdown-item" href="{{route('admin.password.change')}}">{{__('Password Change')}}</a>
+                            <a class="dropdown-item" href="{{route('admin.password.change')}}">{{__('Change Password')}}</a>
                             <a class="dropdown-item" href="{{ route('admin.logout') }}">{{ __('Logout') }}</a>
                         </div>
                     </div>

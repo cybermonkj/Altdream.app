@@ -18,7 +18,7 @@
                         <li><strong>{{__('Attendance ID')}}:</strong> #{{$payment_log->id}}</li>
                         <li><strong>{{__('Name')}}:</strong> {{$payment_log->name}}</li>
                         <li><strong>{{__('Email')}}:</strong> {{$payment_log->email}}</li>
-                        <li><strong>{{__('Payment Method')}}:</strong> {{str_replace('_',' ',$payment_log->package_gateway)}}</li>
+                        <li><strong>{{__('Payment Processor')}}:</strong> {{str_replace('_',' ',$payment_log->package_gateway)}}</li>
                         <li><strong>{{__('Payment Status')}}:</strong> {{$payment_log->status}}</li>
                         <li><strong>{{__('Transaction id')}}:</strong> {{$payment_log->transaction_id}}</li>
                     </ul>

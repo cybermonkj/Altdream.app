@@ -65,7 +65,7 @@ class EventPaymentLogsController extends Controller
             $this->validate($request,[
                 'payment_gateway' => 'required|string'
             ],[
-                'payment_gateway.required' => __('Select A Payment Method')
+                'payment_gateway.required' => __('Select A Payment Processor')
             ]);
         }
 

@@ -116,7 +116,7 @@
         <p>{{__("Hello")}}, <br>
             {{__('Someone has asked to withdraw from thier fundraiser')}} {{amount_with_currency_symbol($data['amount'])}} {{__('form')}} {{$data['user_name']}}
         </p>
-        <p>{{__('Please check and Process')}}</p>
+        <p>{{__('Please check and Process imediately')}}</p>
     </div>
     <footer>
         {!! get_footer_copyright_text() !!}

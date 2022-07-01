@@ -84,7 +84,7 @@
                                 </label>
                             </div>
                             <div class="form-group">
-                                <label for="site_payment_gateway"><strong>{{__('Enable/Disable Payment Gateway')}}</strong></label>
+                                <label for="site_payment_gateway"><strong>{{__('Enable/Disable Payment Processor')}}</strong></label>
                                 <label class="switch">
                                     <input type="checkbox" name="site_payment_gateway"  @if(!empty(get_static_option('site_payment_gateway'))) checked @endif id="site_payment_gateway">
                                     <span class="slider onff"></span>

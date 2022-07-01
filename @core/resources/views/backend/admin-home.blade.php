@@ -63,22 +63,22 @@
           <div class="col-lg-6">
             <div class="card margin-top-40">
                 <div class="smart-card">
-                    <h4 class="title">{{__('Recent Donation Logs')}}</h4>
+                    <h4 class="title">{{__('Recent Fundraiser Logs')}}</h4>
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
-                            <th>{{__('Donation ID')}}</th>
+                            <th>{{__('Fundraiser ID')}}</th>
                             <th>{{__('Amount')}}</th>
-                            <th>{{__('Payment Gateway')}}</th>
+                            <!-- <th>{{__('Payment Processor')}}</th> -->
                             <th>{{__('Payment Status')}}</th>
-                            <th>{{__('Date')}}</th>
+                            <!-- <th>{{__('Date')}}</th> -->
                             </thead>
                             <tbody>
                             @foreach($causes_recent as $data)
                                 <tr>
                                     <td>#{{$data->id}}</td>
                                     <td>{{amount_with_currency_symbol($data->amount)}}</td>
-                                    <td>{{str_replace('_',' ',$data->payment_gateway)}}</td>
+                                    <!-- <td>{{str_replace('_',' ',$data->payment_gateway)}}</td> -->
                                     <td>
                                         @php $pay_status = $data->status; @endphp
                                         @if($pay_status == 'complete')
@@ -87,7 +87,7 @@
                                             <span class="alert alert-warning">{{$pay_status}}</span>
                                         @endif
                                     </td>
-                                    <td>{{date_format($data->created_at,'d M Y h:i:s')}}</td>
+                                    <!-- <td>{{date_format($data->created_at,'d M Y h:i:s')}}</td> -->
                                 </tr>
                             @endforeach
                             </tbody>
@@ -104,15 +104,15 @@
                         <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
-                                <th>{{__('Attendance ID')}}</th>
+                                <!-- <th>{{__('Attendance ID')}}</th> -->
                                 <th>{{__('Event Name')}}</th>
                                 <th>{{__('Payment Status')}}</th>
-                                <th>{{__('Date')}}</th>
+                                <!-- <th>{{__('Date')}}</th> -->
                                 </thead>
                                 <tbody>
                                 @foreach($event_attendance_recent_order as $data)
                                     <tr>
-                                        <td>#{{$data->id}}</td>
+                                        <!-- <td>#{{$data->id}}</td> -->
                                         <td>{{$data->event_name}}</td>
 
                                         <td>
@@ -123,7 +123,7 @@
                                                 <span class="alert alert-warning">{{$pay_status}}</span>
                                             @endif
                                         </td>
-                                        <td>{{date_format($data->created_at,'d M Y h:i:s')}}</td>
+                                        <!-- <td>{{date_format($data->created_at,'d M Y h:i:s')}}</td> -->
                                     </tr>
                                 @endforeach
                                 </tbody>

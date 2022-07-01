@@ -20,7 +20,7 @@
             <input type="hidden" name="metadata" value="{{ json_encode($array = ['track' => $paystack_data['track'],'type' => $paystack_data['type']]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}}
             <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
             <p>
-                <button id="submit_btn" type="submit" >{{__('Redirecting..')}}</button>
+                <button id="submit_btn" type="submit" >{{__('Processing..')}}</button>
             </p>
         </div>
     </div>

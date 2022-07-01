@@ -357,7 +357,7 @@ class UserDashboardController extends Controller
         return redirect()->back()->with(['msg' => __('item deleted'), 'type' => 'danger']);
     }
 
-    // User Campaign Log and Withdraw Code
+    // User Campaign Log and Withdrawal Code
     public function campaign_log_withdraw()
     {
         $causes = Cause::where('user_id', $this->logged_user_details()->id)->get();
@@ -415,7 +415,7 @@ class UserDashboardController extends Controller
             return redirect()->back()->with(['msg' => $e->getMessage(), 'type' => 'success']);
         }
         
-        return redirect()->back()->with(['msg' => __('Your Withdraw Request has been sent'), 'type' => 'success']);
+        return redirect()->back()->with(['msg' => __('Your Withdrawal Request has been sent'), 'type' => 'success']);
     }
 
 

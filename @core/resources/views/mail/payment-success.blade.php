@@ -59,8 +59,8 @@
         </a>
     </div>
     <p>{{__('Hi '.$data->name)}}</p>
-    <p>{{__('You payment success for '. get_static_option('site_title'))}}</p>
-    <table>
+    <p>{{__('Your payment was successfull '. get_static_option('site_title'))}}</p>
+    <!-- <table>
         <tr>
             <td>{{__('Order ID')}}</td>
             <td>{{$data->order_id}}</td>
@@ -74,7 +74,7 @@
             <td>{{site_currency_symbol()}}{{$data->package_price}}</td>
         </tr>
         <tr>
-            <td>{{__('Payment Gateway')}}</td>
+            <td>{{__('Payment Processor')}}</td>
             <td>{{ucfirst(str_replace('_',' ',$data->package_gateway))}}</td>
         </tr>
         <tr>
@@ -85,10 +85,10 @@
             <td>{{__('Transaction ID')}}</td>
             <td>{{$data->transaction_id}}</td>
         </tr>
-    </table>
-    <footer>
+    </table> -->
+    <!-- <footer>
        {!! render_footer_copyright_text() !!}
-    </footer>
+    </footer> -->
 </div>
 </body>
 </html>

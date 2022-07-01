@@ -59,26 +59,26 @@
         </a>
     </div>
     <p>{{__('Hi '.$data->name)}}</p>
-    <p>{{__('You payment success for '. get_static_option('site_title'))}}</p>
+    <p>{{__('You payment was a success for '. get_static_option('site_title'))}}</p>
     <table>
         <tr>
             <td>{{__('Attendance ID')}}</td>
             <td>{{$data->attendance_id}}</td>
         </tr>
-        <tr>
+        <!-- <tr>
             <td>{{__('Event Name')}}</td>
             <td>{{$data->event_name}}</td>
         </tr>
         <tr>
             <td>{{__('Event Cost')}}</td>
             <td>{{site_currency_symbol()}}{{$data->event_cost}}</td>
-        </tr>
+        </tr> -->
         <tr>
-            <td>{{__('Quantity')}}</td>
+            <td>{{__('Amount')}}</td>
             <td>{{$data->attendance_logs->quantity}}</td>
         </tr>
-        <tr>
-            <td>{{__('Payment Gateway')}}</td>
+        <!-- <tr>
+            <td>{{__('Payment Processor')}}</td>
             <td>{{ucfirst(str_replace('_',' ',$data->package_gateway))}}</td>
         </tr>
         <tr>
@@ -88,7 +88,7 @@
         <tr>
             <td>{{__('Transaction ID')}}</td>
             <td>{{$data->transaction_id}}</td>
-        </tr>
+        </tr> -->
     </table>
     <footer>
         &copy; All Right Reserved By {{get_static_option('site_title')}}

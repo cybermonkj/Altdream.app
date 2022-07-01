@@ -69,7 +69,7 @@
                                         <th>{{__('Billing Name')}}</th>
                                         <th>{{__('Billing Email')}}</th>
                                         <th>{{__('Amount')}}</th>
-                                        <th>{{__('Payment Gateway')}}</th>
+                                        <th>{{__('Payment Processor')}}</th>
                                         <th>{{__('Payment Status')}}</th>
                                         <th>{{__('Transaction ID')}}</th>
                                         <th>{{__('Date')}}</th>

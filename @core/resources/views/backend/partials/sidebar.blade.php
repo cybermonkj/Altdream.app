@@ -24,7 +24,7 @@
                     @if(auth()->guard('admin')->user()->hasRole('Super Admin'))
                         <li class="main_dropdown @if(request()->is(['admin-home/admin/*'])) active @endif">
                             <a href="javascript:void(0)" aria-expanded="true"><i class="ti-user"></i>
-                                <span>{{__('Admin Manage')}}</span></a>
+                                <span>{{__('Admin Manager')}}</span></a>
                             <ul class="collapse">
                                 <li class="{{active_menu('admin-home/admin/all-user')}}"><a
                                             href="{{route('admin.all.user')}}">{{__('All Admin')}}</a></li>
@@ -42,22 +42,22 @@
                         @if(request()->is(['admin-home/frontend/new-user','admin-home/frontend/all-user','admin-home/frontend/all-user/role'])) active @endif
                                     ">
                         <a href="javascript:void(0)" aria-expanded="true"><i class="ti-user"></i>
-                            <span>{{__('Users Manage')}}</span></a>
+                            <span>{{__('Users Manager')}}</span></a>
                         <ul class="collapse">
                             @can('user-list')
                                 <li class="{{active_menu('admin-home/frontend/all-user')}}"><a
-                                            href="{{route('admin.all.frontend.user')}}">{{__('All Users')}}</a></li>
+                                            href="{{route('admin.all.frontend.user')}}">{{__('User List')}}</a></li>
                             @endcan
-                            @can('user-create')
+                            <!-- @can('user-create')
                                 <li class="{{active_menu('admin-home/frontend/new-user')}}"><a
                                             href="{{route('admin.frontend.new.user')}}">{{__('Add New User')}}</a></li>
-                            @endcan
+                            @endcan -->
                         </ul>
 
                     </li>
                     @endcanany
 
-               @canany(['newsletter-list','support-ticket-create','support-ticket-category-index','support-ticket-page-settings'])
+               <!-- @canany(['newsletter-list','support-ticket-create','support-ticket-category-index','support-ticket-page-settings'])
                     <li class="main_dropdown {{active_menu('admin-home/support-tickets')}} @if(request()->is('admin-home/support-tickets/*')) active @endif"
                     >
                         <a href="javascript:void(0)" aria-expanded="true"><i class="ti-support mr-2"></i>
@@ -69,11 +69,11 @@
                            @endcan
                             @can('support-ticket-create')
                             <li class="{{active_menu('admin-home/support-tickets/new')}}"><a
-                                        href="{{route('admin.support.ticket.new')}}">{{__('Add New Ticket')}}</a></li>
                             @endcan
 
                             @can('support-ticket-category-index')
                             <li class="{{active_menu('admin-home/support-tickets/department')}}"><a
+                            href="{{route('admin.support.ticket.new')}}">{{__('Add New Ticket')}}</a></li>
                                         href="{{route('admin.support.ticket.department')}}">{{__('Departments')}}</a></li>
                              @endcan
                              @can('support-ticket-page-settings')
@@ -82,13 +82,13 @@
                              @endcan
                         </ul>
                     </li>
-                 @endcanany
+                 @endcanany -->
 
 
-                    @canany(['newsletter-list','newsletter-create'])
+                    <!-- @canany(['newsletter-list','newsletter-create'])
                     <li class="main_dropdown @if(request()->is(['admin-home/newsletter/*','admin-home/newsletter'])) active @endif ">
                         <a href="javascript:void(0)" aria-expanded="true"><i class="ti-email"></i>
-                            <span>{{__('Newsletter Manage')}}</span></a>
+                            <span>{{__('Newsletter Manager')}}</span></a>
                         <ul class="collapse">
                             @can('newsletter-list')
                                 <li class="{{active_menu('admin-home/newsletter')}}"><a
@@ -102,16 +102,16 @@
                         </ul>
                     </li>
                     @endcanany
-
+ -->
 
                     @canany(['blog-list','blog-create','blog-category-list','blog-page-settings','blog-single-page-settings'])
                     <li class="main_dropdown @if(request()->is(['admin-home/blog/*','admin-home/blog'])) active @endif ">
                         <a href="javascript:void(0)" aria-expanded="true"><i class="ti-write"></i>
-                            <span>{{__('Blogs')}}</span></a>
+                            <span>{{__('News')}}</span></a>
                         <ul class="collapse">
                             @can('blog-list')
                                 <li class="{{active_menu('admin-home/blog')}}"><a
-                                            href="{{route('admin.blog')}}">{{__('All Blog')}}</a></li>
+                                            href="{{route('admin.blog')}}">{{__('All News')}}</a></li>
                             @endcan
                             @can('blog-category-list')
                                 <li class="{{active_menu('admin-home/blog/category')}}"><a
@@ -123,12 +123,12 @@
                             @endcan
                             @can('blog-page-settings')
                                 <li class="{{active_menu('admin-home/blog/page-settings')}}"><a
-                                            href="{{route('admin.blog.page.settings')}}">{{__('Blog Page Settings')}}</a>
+                                            href="{{route('admin.blog.page.settings')}}">{{__('News Page Settings')}}</a>
                                 </li>
                             @endcan
                             @can('blog-single-page-settings')
                                 <li class="{{active_menu('admin-home/blog/single-settings')}}"><a
-                                            href="{{route('admin.blog.single.settings')}}">{{__('Blog Single Settings')}}</a>
+                                            href="{{route('admin.blog.single.settings')}}">{{__('News Single Settings')}}</a>
                                 </li>
                             @endcan
                         </ul>
@@ -159,7 +159,7 @@
                     @endcanany
 
 
-                    @canany(['image-gallery-list','image-gallery-category-list','image-gallery-page-settings'])
+                    <!-- @canany(['image-gallery-list','image-gallery-category-list','image-gallery-page-settings'])
                     <li class="main_dropdown @if(request()->is(['admin-home/gallery-page/*','admin-home/gallery-page'])) active @endif ">
                         <a href="javascript:void(0)" aria-expanded="true"><i class="ti-write"></i>
                             <span>{{__('Image Gallery')}}</span></a>
@@ -181,7 +181,7 @@
                             @endcan
                         </ul>
                     </li>
-                    @endcanany
+                    @endcanany -->
 
                     @can('faq-list')
                         <li class="main_dropdown {{active_menu('admin-home/faq')}}">
@@ -193,17 +193,17 @@
                     @can('client-area-list')
                     <li class="main_dropdown {{active_menu('admin-home/client-area')}}">
                         <a href="{{route('admin.client.area')}}" aria-expanded="true"><i class="ti-control-forward"></i>
-                            <span>{{__('Client Area')}}</span></a>
+                            <span>{{__('Partners Area')}}</span></a>
                     </li>
                     @endcan
 
-                    @can('team-member-list')
+                    <!-- @can('team-member-list')
                         <li class="main_dropdown {{active_menu('admin-home/team-member/all')}}">
                             <a href="{{route('admin.team.member')}}" aria-expanded="true"><i
                                         class="ti-control-forward"></i>
                                 <span>{{__('Team Members')}}</span></a>
                         </li>
-                    @endcan
+                    @endcan -->
 
                 @canany(['page-list','page-create'])
                     <li class="main_dropdown @if(request()->is(['admin-home/page-edit/*','admin-home/page/all','admin-home/page/new'])) active @endif ">
@@ -222,27 +222,27 @@
                     </li>
                     @endcanany
 
-                    @can('testimonial-list')
+                    <!-- @can('testimonial-list')
                         <li class="main_dropdown {{active_menu('admin-home/testimonial/all')}}">
                             <a href="{{route('admin.testimonial')}}" aria-expanded="true"><i
                                         class="ti-control-forward"></i>
                                 <span>{{__('Testimonial')}}</span></a>
                         </li>
-                    @endcan
+                    @endcan -->
 
-                    @can('counterup-list')
+                    <!-- @can('counterup-list')
                         <li class="{{active_menu('admin-home/counterup/all')}}">
                             <a href="{{route('admin.counterup')}}"><i class="ti-control-forward"></i>
                                 <span>{{__('Counterup')}}</span></a>
                         </li>
-                    @endcan
+                    @endcan -->
 
 
-                    @canany(['job-list','job-category-list','job-create','job-applicant-list','job-applicant-report','job-settings'])
+                    <!-- @canany(['job-list','job-category-list','job-create','job-applicant-list','job-applicant-report','job-settings'])
                     <li
                             class="main_dropdown @if(request()->is(['admin-home/jobs','admin-home/jobs/*'])) active @endif ">
                         <a href="javascript:void(0)" aria-expanded="true">
-                            <i class="ti-package mr-2"></i> {{__('Job Post Manage')}}</a>
+                            <i class="ti-package mr-2"></i> {{__('careers Manager')}}</a>
                         <ul class="collapse">
                             @can('job-list')
                                 <li class="{{active_menu('admin-home/jobs/all')}}"><a
@@ -271,7 +271,7 @@
                             @endcan
                         </ul>
                     </li>
-                    @endcanany
+                    @endcanany -->
 
 
                @canany([
@@ -287,7 +287,7 @@
                 ])
                      <li class="main_dropdown @if(request()->is(['admin-home/events','admin-home/events/*'])) active @endif ">
                         <a href="javascript:void(0)" aria-expanded="true">
-                            <i class="ti-timer mr-2"></i> {{__('Events Manage')}}</a>
+                            <i class="ti-timer mr-2"></i> {{__('Events Manager')}}</a>
                         <ul class="collapse">
                             @can('event-list')
                                 <li class="{{active_menu('admin-home/events')}}"><a
@@ -355,7 +355,7 @@
                         <ul class="collapse">
                             @can('donation-list')
                                 <li class="{{active_menu('admin-home/donations')}}"><a
-                                            href="{{route('admin.donations.all')}}">{{__('All Causes')}}</a>
+                                            href="{{route('admin.donations.all')}}">{{__('All Fundraisers')}}</a>
                                 </li>
                             @endcan
                             @can('donation-create')
@@ -365,12 +365,12 @@
                             @endcan
                             @can('donation-category-list')
                                 <li class="{{active_menu('admin-home/donations/category')}}"><a
-                                            href="{{route('admin.donations.category.all')}}">{{__('Causes Category')}}</a>
+                                            href="{{route('admin.donations.category.all')}}">{{__('Fundraisers Category')}}</a>
                                 </li>
                             @endcan
                             @can('donation-pending-cause')
                                 <li class="{{active_menu('admin-home/donations/pending')}}"><a
-                                            href="{{route('admin.donations.pending.all')}}">{{__('All Pending Causes')}} <span class="badge">{{$pending_cases_count}}</span></a>
+                                            href="{{route('admin.donations.pending.all')}}">{{__('All Pending Fundraisers')}} <span class="badge">{{$pending_cases_count}}</span></a>
                                 </li>
                             @endcan
                             @can('donation-withdraw-list')
@@ -380,12 +380,12 @@
                             @endcan
                             @can('donation-payment-list')
                                 <li class="{{active_menu('admin-home/donations/payment-logs')}}"><a
-                                            href="{{route('admin.donations.payment.logs')}}">{{__('Causes Payment Logs')}}</a>
+                                            href="{{route('admin.donations.payment.logs')}}">{{__('Fundraisers Payment Logs')}}</a>
                                 </li>
                             @endcan
                             @can('donation-cause-report')
                                 <li class="{{active_menu('admin-home/donations/report')}}">
-                                    <a href="{{route('admin.donations.report')}}">{{__('Causes Report')}}</a>
+                                    <a href="{{route('admin.donations.report')}}">{{__('Fundraisers Report')}}</a>
                                 </li>
                             @endcan
                             @can('donations-flag-report-list')
@@ -452,7 +452,7 @@
                                         @if(request()->is('admin-home/menu-edit/*')) active @endif
                                                 ">
                                     <a href="javascript:void(0)" aria-expanded="true">
-                                        {{__('Menus Manage')}}</a>
+                                        {{__('Menus Manager')}}</a>
                                     <ul class="collapse">
                                         <li class="{{active_menu('admin-home/menu')}}"><a
                                                     href="{{route('admin.menu')}}">{{__('All Menus')}}</a></li>
@@ -466,7 +466,7 @@
                                         @if(request()->is('admin-home/widgets/*')) active @endif
                                                 ">
                                     <a href="javascript:void(0)" aria-expanded="true">
-                                        {{__('Widgets Manage')}}</a>
+                                        {{__('Widgets Manager')}}</a>
                                     <ul class="collapse">
                                         <li class="{{active_menu('admin-home/widgets')}}"><a
                                                     href="{{route('admin.widgets')}}">{{__('All Widgets')}}</a></li>
@@ -497,7 +497,7 @@
                                 <li class="main_dropdown {{active_menu('admin-home/media-upload/page')}}">
                                     <a href="{{route('admin.upload.media.images.page')}}"
                                        aria-expanded="true">
-                                        {{__('Media Images Manage')}}
+                                        {{__('Media Images Manager')}}
                                     </a>
                                 </li>
                             @endcan
@@ -539,7 +539,7 @@
                                         ">
                                     <a href="javascript:void(0)"
                                        aria-expanded="true">
-                                        {{__('Home Page Manage')}}
+                                        {{__('Home Page Manager')}}
                                     </a>
                                     <ul class="collapse">
                                         @if(in_array(get_static_option('home_page_variant'),['01','02','03']))
@@ -589,7 +589,7 @@
                                                         href="{{route('admin.homeone.latest.news')}}">{{__('Latest News Area')}}</a>
                                             </li>
                                             <li class="{{active_menu('admin-home/home-page-01/section-manage')}}">
-                                                <a href="{{route('admin.homeone.section.manage')}}">{{__('Section Manage')}}</a>
+                                                <a href="{{route('admin.homeone.section.manage')}}">{{__('Section Manager')}}</a>
                                             </li>
                                         @endif
 
@@ -627,7 +627,7 @@
 
                                                 <li class="{{active_menu('admin-home/home-page-04/recent-causes-area')}}">
                                                     <a href="{{route('admin.home.four.recent.causes.area')}}">
-                                                        {{__('Recent Causes Area')}}
+                                                        {{__('Recent Fundraisers Area')}}
                                                     </a>
                                                 </li>
 
@@ -638,7 +638,7 @@
                                                 </li>
 
                                                 <li class="{{active_menu('admin-home/home-page-04-05-06/section-manage')}}">
-                                                    <a href="{{route('admin.home.four.five.six.section.manage')}}">{{__('Section Manage')}}</a>
+                                                    <a href="{{route('admin.home.four.five.six.section.manage')}}">{{__('Section Manager')}}</a>
                                                 </li>
                                             @endif
 
@@ -676,7 +676,7 @@
 
                                                 <li class="{{active_menu('admin-home/home-page-05/recent-causes-area')}}">
                                                     <a href="{{route('admin.home.five.recent.causes.area')}}">
-                                                        {{__('Recent Causes Area')}}
+                                                        {{__('Recent Fundraisers Area')}}
                                                     </a>
                                                 </li>
 
@@ -692,7 +692,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="{{active_menu('admin-home/home-page-04-05-06/section-manage')}}">
-                                                    <a href="{{route('admin.home.four.five.six.section.manage')}}">{{__('Section Manage')}}</a>
+                                                    <a href="{{route('admin.home.four.five.six.section.manage')}}">{{__('Section Manager')}}</a>
                                                 </li>
                                             @endif
 
@@ -725,7 +725,7 @@
 
                                                 <li class="{{active_menu('admin-home/home-page-06/recent-causes-area')}}">
                                                     <a href="{{route('admin.home.six.recent.causes.area')}}">
-                                                        {{__('Recent Causes Area')}}
+                                                        {{__('Recent Fundraisers Area')}}
                                                     </a>
                                                 </li>
 
@@ -747,7 +747,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="{{active_menu('admin-home/home-page-04-05-06/section-manage')}}">
-                                                    <a href="{{route('admin.home.four.five.six.section.manage')}}">{{__('Section Manage')}}</a>
+                                                    <a href="{{route('admin.home.four.five.six.section.manage')}}">{{__('Section Manager')}}</a>
                                                 </li>
                                             @endif
                                     </ul>
@@ -758,10 +758,10 @@
                                 <li class="main_dropdown @if(request()->is('admin-home/about-page/*')  ) active @endif ">
                                     <a href="javascript:void(0)"
                                        aria-expanded="true">
-                                        {{__('About Page Manage')}}
+                                        {{__('About Page')}}
                                     </a>
                                     <ul class="collapse">
-                                        <li class="{{active_menu('admin-home/about-page/about-us')}}"><a
+                                        <!-- <li class="{{active_menu('admin-home/about-page/about-us')}}"><a
                                                     href="{{route('admin.about.page.about')}}">{{__('About Us Section')}}</a>
                                         </li>
                                         <li class="{{active_menu('admin-home/about-page/our-mission')}}"><a
@@ -769,31 +769,31 @@
                                         </li>
                                         <li class="{{active_menu('admin-home/about-page/counterup')}}"><a
                                                     href="{{route('admin.about.counterup')}}">{{__('Counterup Section')}}</a>
-                                        </li>
+                                        </li> -->
                                         <li class="{{active_menu('admin-home/about-page/what-we-do')}}"><a
                                                     href="{{route('admin.about.what.we.do')}}">{{__('What We Do Section')}}</a>
                                         </li>
                                         <li class="{{active_menu('admin-home/about-page/testimonial')}}"><a
                                                     href="{{route('admin.about.testimonial')}}">{{__('Testimonial Section')}}</a>
                                         </li>
-                                        <li class="{{active_menu('admin-home/about-page/team-member')}}"><a
+                                        <!-- <li class="{{active_menu('admin-home/about-page/team-member')}}"><a
                                                     href="{{route('admin.about.team.member')}}">{{__('Team Member Section')}}</a>
-                                        </li>
+                                        </li> -->
                                         <li class="{{active_menu('admin-home/about-page/section-manage')}}"><a
-                                                    href="{{route('admin.about.page.section.manage')}}">{{__('Section Manage')}}</a>
+                                                    href="{{route('admin.about.page.section.manage')}}">{{__('Section Manager')}}</a>
                                         </li>
                                     </ul>
                                 </li>
                             @endcan
                             @can('page-settings-event-page-manage')
                                 <li class="main_dropdown @if(request()->is('admin-home/events/page-manage')  ) active @endif ">
-                                    <a href="javascript:void(0)"
+                                    <!-- <a href="javascript:void(0)"
                                        aria-expanded="true">
-                                        {{__('Events Page Manage')}}
-                                    </a>
+                                        {{__('Events Page Manager')}}
+                                    </a> -->
                                     <ul class="collapse">
                                         <li class="{{active_menu('admin-home/events/page-manage')}}"><a
-                                                    href="{{route('admin.event.page.manage')}}">{{__('Page Manage')}}</a>
+                                                    href="{{route('admin.event.page.manage')}}">{{__('Page Manager')}}</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -802,20 +802,20 @@
                                 <li class="main_dropdown @if(request()->is('admin-home/contact-page/*')  ) active @endif">
                                     <a href="javascript:void(0)"
                                        aria-expanded="true">
-                                        {{__('Contact Page Manage')}}
+                                        {{__('Contact Page')}}
                                     </a>
                                     <ul class="collapse">
-                                        <li class="{{active_menu('admin-home/contact-page/contact-info')}}">
+                                        <!-- <li class="{{active_menu('admin-home/contact-page/contact-info')}}">
                                             <a href="{{route('admin.contact.info')}}">{{__('Contact Info')}}</a>
                                         </li>
                                         <li class="{{active_menu('admin-home/contact-page/form-area')}}">
                                             <a href="{{route('admin.contact.page.form.area')}}">{{__('Form Area')}}</a>
-                                        </li>
-                                        <li class="{{active_menu('admin-home/contact-page/map')}}">
+                                        </li> -->
+                                        <!-- <li class="{{active_menu('admin-home/contact-page/map')}}">
                                             <a href="{{route('admin.contact.page.map')}}">{{__('Google Map Area')}}</a>
-                                        </li>
+                                        </li> -->
                                         <li class="{{active_menu('admin-home/contact-page/section-manage')}}">
-                                            <a href="{{route('admin.contact.page.section.manage')}}">{{__('Section Manage')}}</a>
+                                            <a href="{{route('admin.contact.page.section.manage')}}">{{__('Sections Manager')}}</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -824,21 +824,21 @@
                                 @can('page-settings-success-story-page-manage')
                                 <li class="main_dropdown {{active_menu('admin-home/success-story-page-manage')}}">
                                     <a href="{{route('admin.success.story.page.manage')}}" aria-expanded="true">
-                                        {{__('Success Story Page Manage')}}</a>
+                                        {{__('Success Story Page')}}</a>
                                 </li>
                                 @endcan
 
                             @can('page-settings-error-page-manage')
                                 <li class="main_dropdown {{active_menu('admin-home/404-page-manage')}}">
                                     <a href="{{route('admin.404.page.settings')}}" aria-expanded="true">
-                                        {{__('404 Page Manage')}}</a>
+                                        {{__('404 Error Page')}}</a>
                                 </li>
                             @endcan
                             @can('page-settings-maintain-page-manage')
                                 <li class="main_dropdown {{active_menu('admin-home/maintains-page/settings')}}">
                                     <a href="{{route('admin.maintains.page.settings')}}"
                                        aria-expanded="true">
-                                        {{__('Maintain Page Manage')}}
+                                        {{__('Maintainance Mode')}}
                                     </a>
                                 </li>
                             @endcan
@@ -886,48 +886,48 @@
                                             href="{{route('admin.general.color.settings')}}">{{__('Color Settings')}}</a>
                                 </li>
                             @endcan
-                            @can('general-settings-typography')
+                            <!-- @can('general-settings-typography')
                                 <li class="{{active_menu('admin-home/general-settings/typography-settings')}}"><a
                                             href="{{route('admin.general.typography.settings')}}">{{__('Typography Settings')}}</a>
                                 </li>
-                            @endcan
+                            @endcan -->
                             @can('general-settings-seo-settings')
                                 <li class="{{active_menu('admin-home/general-settings/seo-settings')}}"><a
-                                            href="{{route('admin.general.seo.settings')}}">{{__('SEO Settings')}}</a>
+                                            href="{{route('admin.general.seo.settings')}}">{{__('SEO Manager')}}</a>
                                 </li>
                             @endcan
                             @can('general-settings-third-party-script')
                                 <li class="{{active_menu('admin-home/general-settings/scripts')}}"><a
-                                            href="{{route('admin.general.scripts.settings')}}">{{__('Third Party Scripts')}}</a>
+                                            href="{{route('admin.general.scripts.settings')}}">{{__('Third Party Code')}}</a>
                                 </li>
                             @endcan
                             @can('general-settings-email-template')
                                 <li class="{{active_menu('admin-home/general-settings/email-template')}}"><a
-                                            href="{{route('admin.general.email.template')}}">{{__('Email Template')}}</a>
+                                            href="{{route('admin.general.email.template')}}">{{__('Email Templates')}}</a>
                                 </li>
                                 <li class="{{active_menu('admin-home/general-settings/email-settings')}}"><a
-                                            href="{{route('admin.general.email.settings')}}">{{__('Email Settings')}}</a>
+                                            href="{{route('admin.general.email.settings')}}">{{__('Email Config')}}</a>
                                 </li>
                             @endcan
                             @can('general-settings-smtp-settings')
                                 <li class="{{active_menu('admin-home/general-settings/smtp-settings')}}"><a
-                                            href="{{route('admin.general.smtp.settings')}}">{{__('SMTP Settings')}}</a>
+                                            href="{{route('admin.general.smtp.settings')}}">{{__('SMTP Manager')}}</a>
                                 </li>
                             @endcan
                             @can('general-settings-regenerate-media-image')
                                 <li class="{{active_menu('admin-home/general-settings/regenerate-image')}}"><a
-                                            href="{{route('admin.general.regenerate.thumbnail')}}">{{__('Regenerate Media Image')}}</a>
+                                            href="{{route('admin.general.regenerate.thumbnail')}}">{{__('Regenerate Media')}}</a>
                                 </li>
                             @endcan
-                            @can('general-settings-page-settings')
+                            <!-- @can('general-settings-page-settings')
                                 <li class="{{active_menu('admin-home/general-settings/page-settings')}}"><a
                                             href="{{route('admin.general.page.settings')}}">{{__('Page Settings')}}</a>
                                 </li>
-                            @endcan
+                            @endcan -->
                             @can('general-settings-payment-gateway')
                                 @if(!empty(get_static_option('site_payment_gateway')))
                                     <li class="{{active_menu('admin-home/general-settings/payment-settings')}}"><a
-                                                href="{{route('admin.general.payment.settings')}}">{{__('Payment Gateway Settings')}}</a>
+                                                href="{{route('admin.general.payment.settings')}}">{{__('Payment Processor')}}</a>
                                     </li>
                                 @endif
                             @endcan
@@ -941,23 +941,23 @@
                             @endcan
                             @can('general-settings-cache-settings')
                                 <li class="{{active_menu('admin-home/general-settings/cache-settings')}}"><a
-                                            href="{{route('admin.general.cache.settings')}}">{{__('Cache Settings')}}</a>
+                                            href="{{route('admin.general.cache.settings')}}">{{__('Cache Manager')}}</a>
                                 </li>
                             @endcan
                             @can('general-settings-gdpr-settings')
                                 <li class="{{active_menu('admin-home/general-settings/gdpr-settings')}}"><a
-                                            href="{{route('admin.general.gdpr.settings')}}">{{__('GDPR Compliant Cookies Settings')}}</a>
+                                            href="{{route('admin.general.gdpr.settings')}}">{{__('GDPR Settings')}}</a>
                                 </li>
                             @endcan
                             @can('general-settings-sitemap')
                                 <li class="{{active_menu('admin-home/general-settings/sitemap-settings')}}"><a
-                                            href="{{route('admin.general.sitemap.settings')}}">{{__('Sitemap Settings')}}</a>
+                                            href="{{route('admin.general.sitemap.settings')}}">{{__('SEO sitemap')}}</a>
                                 </li>
                             @endcan
                             @can('general-settings-rss-feed')
                                 <li class="{{active_menu('admin-home/general-settings/rss-settings')}}"><a
 
-                                            href="{{route('admin.general.rss.feed.settings')}}">{{__('RSS Feed Settings')}}</a>
+                                            href="{{route('admin.general.rss.feed.settings')}}">{{__('External feed')}}</a>
                                 </li>
                             @endcan
                                 @can('general-settings-database-upgrade')
@@ -967,7 +967,7 @@
                                 @endcan
                             @can('general-settings-license')
                                 <li class="{{active_menu('admin-home/general-settings/license-setting')}}"><a
-                                            href="{{route('admin.general.license.settings')}}">{{__('Licence Settings')}}</a>
+                                            href="{{route('admin.general.license.settings')}}">{{__('AltdreamKey')}}</a>
                                 </li>
                             @endcan
                         </ul>

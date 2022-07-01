@@ -8,7 +8,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="login-form-wrapper">
-                        <h2 class="text-center"><?php echo e(__('Register New Account')); ?></h2><br>
+                        <h2 class="text-center"><?php echo e(__('Signup')); ?></h2><br>
                         <?php echo $__env->make('backend.partials.message', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                         <?php if($errors->any()): ?>
                             <div class="alert alert-danger">

@@ -100,7 +100,7 @@
             color: white;
         }
         .logo-wrapper img{
-            max-width: 200px;
+            max-width: 100px;
         }
     </style>
 </head>

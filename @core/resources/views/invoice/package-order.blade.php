@@ -171,7 +171,7 @@
                     <td>{{amount_with_currency_symbol($payment_details->package_price,true)}}</td>
                 </tr>
                 <tr>
-                    <th>{{__('Payment Gateway')}}</th>
+                    <th>{{__('Payment Processor')}}</th>
                     <td>{{str_replace('_',' ',$payment_details->package_gateway)}}</td>
                 </tr>
                 <tr>

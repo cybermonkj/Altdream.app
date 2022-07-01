@@ -54,11 +54,11 @@
 
 <body>
 <!-- preloader area start -->
-<?php if(!empty(get_static_option('admin_loader_animation'))): ?>
+<!-- <?php if(!empty(get_static_option('admin_loader_animation'))): ?>
 <div id="preloader">
     <div class="loader"></div>
 </div>
-<?php endif; ?>
+<?php endif; ?> -->
 <!-- preloader area end -->
 <!-- page container area start -->
 <div class="page-container">
@@ -81,12 +81,12 @@
                 <!-- profile info & task notification -->
                 <div class="col-md-6 col-sm-4 clearfix">
                     <ul class="notification-area pull-right">
-                        <li ><label class="switch yes">
+                        <!-- <li ><label class="switch yes">
                             <input id="darkmode" type="checkbox" data-mode=<?php echo e(get_static_option('site_admin_dark_mode')); ?> <?php if(get_static_option('site_admin_dark_mode') == 'on'): ?> checked <?php else: ?> <?php endif; ?>>
                             <span class="slider-color-mode onff"></span>
-                        </label></li>
-                        <li id="full-view"><i class="ti-fullscreen"></i></li>
-                        <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
+                        </label></li> -->
+                        <!-- <li id="full-view"><i class="ti-fullscreen"></i></li>
+                        <li id="full-view-exit"><i class="ti-zoom-out"></i></li> -->
                         <li><a class="btn <?php if(get_static_option('site_admin_dark_mode') == 'off'): ?>btn-primary <?php else: ?> btn-dark  <?php endif; ?>" target="_blank" href="<?php echo e(url('/')); ?>"><i class="fas fa-external-link-alt mr-1"></i>   <?php echo e(__('View Site')); ?> </a></li>
                     </ul>
                 </div>
@@ -115,7 +115,7 @@
                      <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><?php echo e(Auth::user()->name); ?> <i class="fa fa-angle-down"></i></h4>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="<?php echo e(route('admin.profile.update')); ?>"><?php echo e(__('Edit Profile')); ?></a>
-                            <a class="dropdown-item" href="<?php echo e(route('admin.password.change')); ?>"><?php echo e(__('Password Change')); ?></a>
+                            <a class="dropdown-item" href="<?php echo e(route('admin.password.change')); ?>"><?php echo e(__('Change Password')); ?></a>
                             <a class="dropdown-item" href="<?php echo e(route('admin.logout')); ?>"><?php echo e(__('Logout')); ?></a>
                         </div>
                     </div>

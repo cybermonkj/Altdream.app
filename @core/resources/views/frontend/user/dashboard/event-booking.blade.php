@@ -24,7 +24,7 @@
                                 <small class="d-block"><strong>{{__('Attendance ID:')}}</strong> #{{$data->id}}</small>
                                 <small class="d-block"><strong>{{__('Ticket Price:')}}</strong> {{amount_with_currency_symbol($data->event_cost)}}</small>
                                 <small class="d-block"><strong>{{__('Quantity:')}}</strong> {{$data->quantity}}</small>
-                                <small class="d-block"><strong>{{__('Payment Gateway:')}}</strong>
+                                <small class="d-block"><strong>{{__('Payment Processor:')}}</strong>
                                     @php
                                         $custom_fields = unserialize($data->custom_fields);
                                         $selected_payment_gateway = isset($custom_fields['selected_payment_gateway']) ? str_replace('_',' ',__($custom_fields['selected_payment_gateway'])) : '';

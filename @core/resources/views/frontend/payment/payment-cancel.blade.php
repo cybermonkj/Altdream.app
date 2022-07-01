@@ -1,6 +1,6 @@
 @extends('frontend.frontend-page-master')
 @section('page-title')
-    {{__('Order Cancelled Of:'.' '.$order_details->package_name)}}
+    {{__('Payment Cancelled for:'.' '.$order_details->package_name)}}
 @endsection
 @section('content')
     <div class="error-page-content padding-120">
@@ -20,7 +20,7 @@
                             {{get_static_option('site_order_cancel_page_description')}}
                         </p>
                         <div class="btn-wrapper">
-                            <a href="{{url('/')}}" class="boxed-btn">{{__('Back To Home')}}</a>
+                            <a href="{{url('/')}}" class="boxed-btn">{{__('Back Home')}}</a>
                         </div>
                     </div>
                 </div>

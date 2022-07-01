@@ -18,7 +18,7 @@
                             <li><strong>{{__('Email')}}:</strong> {{$payment->email}}</li>
                             <li><strong>{{__('Event')}}:</strong> {{$payment->event_name}}</li>
                             <li><strong>{{__('Ticket Cost')}} :</strong> {{amount_with_currency_symbol($payment->event_cost)}}</li>
-                            <li><strong>{{__('Payment Gateway')}}:</strong> {{$payment->package_gateway}}</li>
+                            <li><strong>{{__('Payment Processor')}}:</strong> {{$payment->package_gateway}}</li>
                             <li><strong>{{__('Transaction ID')}}:</strong> {{$payment->transaction_id}}</li>
                             <li><strong>{{__('Status')}}:</strong> {{$payment->status}}</li>
                         </ul>

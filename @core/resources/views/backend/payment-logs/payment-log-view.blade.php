@@ -19,7 +19,7 @@
                                 <li><strong>{{__('Email')}}</strong> : {{$payment_log->email}}</li>
                                  <li><strong>{{__('Package Name')}}</strong> : {{purify_html($payment_log->package_name)}}</li>
                                 <li><strong>{{__('Package Price')}}</strong> : {{$payment_log->package_price}}</li>
-                                <li><strong>{{__('Payment Gateway')}}</strong> : {{str_replace('_',' ',$payment_log->package_gateway)}}</li>
+                                <li><strong>{{__('Payment Processor')}}</strong> : {{str_replace('_',' ',$payment_log->package_gateway)}}</li>
                                 <li><strong>{{__('Payment Status')}}</strong> : {{$payment_log->status}}</li>
                                 <li><strong>{{__('Transaction ID')}}</strong> : {{$payment_log->transaction_id}}</li>
                                 <li><strong>{{__('Date')}}</strong> : {{$payment_log->status}}</li>

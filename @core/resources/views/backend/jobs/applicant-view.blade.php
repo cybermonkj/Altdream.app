@@ -16,7 +16,7 @@
                             <li><strong>{{__('Email')}}:</strong> {{$applicant->email}}</li>
 
                             <li><strong>{{__('Application Fee')}}:</strong> {{amount_with_currency_symbol($applicant->application_fee)}}</li>
-                            <li><strong>{{__('Payment Gateway')}}:</strong> {{$applicant->payment_gateway}}</li>
+                            <li><strong>{{__('Payment Processor')}}:</strong> {{$applicant->payment_gateway}}</li>
                             <li><strong>{{__('Transaction ID')}}:</strong> {{$applicant->transaction_id}}</li>
                             <li><strong>{{__('Payment Status')}}:</strong> {{$applicant->payment_status}}</li>
                             <li><strong>{{__('Applied At')}}:</strong> {{$applicant->created_at->format('D,d m Y')}}</li>

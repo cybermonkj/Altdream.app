@@ -11,7 +11,6 @@
 <div class="stripe-payment-wrapper">
     <div class="srtipe-payment-inner-wrapper">
         <form action="{{$razorpay_data['route']}}" method="POST" >
-            <!-- Note that the amount is in paise = 50 INR -->
             <input type="hidden" name="order_id" value="{{$razorpay_data['order_id']}}" />
         @php
             $site_logo = get_attachment_image_by_id(get_static_option('site_logo'), "full", false);

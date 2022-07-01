@@ -1,6 +1,6 @@
-@extends('frontend.frontend-page-master')
+<!-- @extends('frontend.frontend-page-master') -->
 @section('page-title')
-    {{__('User Dashboard')}}
+    {{__('Fundraiser Dashboard')}}
 @endsection
 @section('content')
     <section class="login-page-wrapper">

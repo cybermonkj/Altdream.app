@@ -25,7 +25,7 @@
                             </div>
                             <div class="row mb-4 rmber-area">
                                 <div class="col-12 text-center">
-                                    <a href="{{route('user.resend.verify.mail')}}">{{__('Send Verify Code Again?')}}</a>
+                                    <a href="{{route('user.resend.verify.mail')}}">{{__('Send verification Code Again?')}}</a>
                                 </div>
                             </div>
                         </form>

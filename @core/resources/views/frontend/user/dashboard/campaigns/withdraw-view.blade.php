@@ -17,7 +17,7 @@
               <li><strong>{{__('Available For Withdraw Amount')}}:</strong>{{amount_with_currency_symbol(optional($withdraw->cause)->raised - optional($withdraw->cause)->withdraws->where('payment_status' , 'approved')->pluck('withdraw_request_amount')->sum())}} </li>
           @endif
           <li><strong>{{__('Requested Withdraw Amount')}}:</strong> {{amount_with_currency_symbol($withdraw->withdraw_request_amount)}} </li>
-          <li><strong>{{__('Payment Gateway')}}:</strong> {{$withdraw->payment_gateway}} </li>
+          <li><strong>{{__('Payment Processor')}}:</strong> {{$withdraw->payment_gateway}} </li>
           <li><strong>{{__('Payment Status')}}:</strong> {{$withdraw->payment_status}} </li>
           <li><strong>{{__('Request Date')}}:</strong> {{$withdraw->created_at->format('D, d M Y')}} </li>
           @if($withdraw->payment_status === 'approved')

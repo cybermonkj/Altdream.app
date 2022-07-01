@@ -1,4 +1,4 @@
-@extends('frontend.user.dashboard.user-master')
+<!-- @extends('frontend.user.dashboard.user-master') -->
 @section('site-title')
 {{ __('User Dashboard') }}
 @endsection

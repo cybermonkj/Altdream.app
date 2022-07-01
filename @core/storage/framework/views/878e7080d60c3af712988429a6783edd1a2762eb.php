@@ -26,7 +26,7 @@
                     <?php if(auth()->guard('admin')->user()->hasRole('Super Admin')): ?>
                         <li class="main_dropdown <?php if(request()->is(['admin-home/admin/*'])): ?> active <?php endif; ?>">
                             <a href="javascript:void(0)" aria-expanded="true"><i class="ti-user"></i>
-                                <span><?php echo e(__('Admin Manage')); ?></span></a>
+                                <span><?php echo e(__('Admin Manager')); ?></span></a>
                             <ul class="collapse">
                                 <li class="<?php echo e(active_menu('admin-home/admin/all-user')); ?>"><a
                                             href="<?php echo e(route('admin.all.user')); ?>"><?php echo e(__('All Admin')); ?></a></li>
@@ -44,22 +44,22 @@
                         <?php if(request()->is(['admin-home/frontend/new-user','admin-home/frontend/all-user','admin-home/frontend/all-user/role'])): ?> active <?php endif; ?>
                                     ">
                         <a href="javascript:void(0)" aria-expanded="true"><i class="ti-user"></i>
-                            <span><?php echo e(__('Users Manage')); ?></span></a>
+                            <span><?php echo e(__('Users Manager')); ?></span></a>
                         <ul class="collapse">
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('user-list')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/frontend/all-user')); ?>"><a
-                                            href="<?php echo e(route('admin.all.frontend.user')); ?>"><?php echo e(__('All Users')); ?></a></li>
+                                            href="<?php echo e(route('admin.all.frontend.user')); ?>"><?php echo e(__('User List')); ?></a></li>
                             <?php endif; ?>
-                            <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('user-create')): ?>
+                            <!-- <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('user-create')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/frontend/new-user')); ?>"><a
                                             href="<?php echo e(route('admin.frontend.new.user')); ?>"><?php echo e(__('Add New User')); ?></a></li>
-                            <?php endif; ?>
+                            <?php endif; ?> -->
                         </ul>
 
                     </li>
                     <?php endif; ?>
 
-               <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->any(['newsletter-list','support-ticket-create','support-ticket-category-index','support-ticket-page-settings'])): ?>
+               <!-- <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->any(['newsletter-list','support-ticket-create','support-ticket-category-index','support-ticket-page-settings'])): ?>
                     <li class="main_dropdown <?php echo e(active_menu('admin-home/support-tickets')); ?> <?php if(request()->is('admin-home/support-tickets/*')): ?> active <?php endif; ?>"
                     >
                         <a href="javascript:void(0)" aria-expanded="true"><i class="ti-support mr-2"></i>
@@ -71,11 +71,11 @@
                            <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('support-ticket-create')): ?>
                             <li class="<?php echo e(active_menu('admin-home/support-tickets/new')); ?>"><a
-                                        href="<?php echo e(route('admin.support.ticket.new')); ?>"><?php echo e(__('Add New Ticket')); ?></a></li>
                             <?php endif; ?>
 
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('support-ticket-category-index')): ?>
                             <li class="<?php echo e(active_menu('admin-home/support-tickets/department')); ?>"><a
+                            href="<?php echo e(route('admin.support.ticket.new')); ?>"><?php echo e(__('Add New Ticket')); ?></a></li>
                                         href="<?php echo e(route('admin.support.ticket.department')); ?>"><?php echo e(__('Departments')); ?></a></li>
                              <?php endif; ?>
                              <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('support-ticket-page-settings')): ?>
@@ -84,13 +84,13 @@
                              <?php endif; ?>
                         </ul>
                     </li>
-                 <?php endif; ?>
+                 <?php endif; ?> -->
 
 
-                    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->any(['newsletter-list','newsletter-create'])): ?>
+                    <!-- <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->any(['newsletter-list','newsletter-create'])): ?>
                     <li class="main_dropdown <?php if(request()->is(['admin-home/newsletter/*','admin-home/newsletter'])): ?> active <?php endif; ?> ">
                         <a href="javascript:void(0)" aria-expanded="true"><i class="ti-email"></i>
-                            <span><?php echo e(__('Newsletter Manage')); ?></span></a>
+                            <span><?php echo e(__('Newsletter Manager')); ?></span></a>
                         <ul class="collapse">
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('newsletter-list')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/newsletter')); ?>"><a
@@ -104,16 +104,16 @@
                         </ul>
                     </li>
                     <?php endif; ?>
-
+ -->
 
                     <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->any(['blog-list','blog-create','blog-category-list','blog-page-settings','blog-single-page-settings'])): ?>
                     <li class="main_dropdown <?php if(request()->is(['admin-home/blog/*','admin-home/blog'])): ?> active <?php endif; ?> ">
                         <a href="javascript:void(0)" aria-expanded="true"><i class="ti-write"></i>
-                            <span><?php echo e(__('Blogs')); ?></span></a>
+                            <span><?php echo e(__('News')); ?></span></a>
                         <ul class="collapse">
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('blog-list')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/blog')); ?>"><a
-                                            href="<?php echo e(route('admin.blog')); ?>"><?php echo e(__('All Blog')); ?></a></li>
+                                            href="<?php echo e(route('admin.blog')); ?>"><?php echo e(__('All News')); ?></a></li>
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('blog-category-list')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/blog/category')); ?>"><a
@@ -125,12 +125,12 @@
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('blog-page-settings')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/blog/page-settings')); ?>"><a
-                                            href="<?php echo e(route('admin.blog.page.settings')); ?>"><?php echo e(__('Blog Page Settings')); ?></a>
+                                            href="<?php echo e(route('admin.blog.page.settings')); ?>"><?php echo e(__('News Page Settings')); ?></a>
                                 </li>
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('blog-single-page-settings')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/blog/single-settings')); ?>"><a
-                                            href="<?php echo e(route('admin.blog.single.settings')); ?>"><?php echo e(__('Blog Single Settings')); ?></a>
+                                            href="<?php echo e(route('admin.blog.single.settings')); ?>"><?php echo e(__('News Single Settings')); ?></a>
                                 </li>
                             <?php endif; ?>
                         </ul>
@@ -161,7 +161,7 @@
                     <?php endif; ?>
 
 
-                    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->any(['image-gallery-list','image-gallery-category-list','image-gallery-page-settings'])): ?>
+                    <!-- <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->any(['image-gallery-list','image-gallery-category-list','image-gallery-page-settings'])): ?>
                     <li class="main_dropdown <?php if(request()->is(['admin-home/gallery-page/*','admin-home/gallery-page'])): ?> active <?php endif; ?> ">
                         <a href="javascript:void(0)" aria-expanded="true"><i class="ti-write"></i>
                             <span><?php echo e(__('Image Gallery')); ?></span></a>
@@ -183,7 +183,7 @@
                             <?php endif; ?>
                         </ul>
                     </li>
-                    <?php endif; ?>
+                    <?php endif; ?> -->
 
                     <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('faq-list')): ?>
                         <li class="main_dropdown <?php echo e(active_menu('admin-home/faq')); ?>">
@@ -195,17 +195,17 @@
                     <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('client-area-list')): ?>
                     <li class="main_dropdown <?php echo e(active_menu('admin-home/client-area')); ?>">
                         <a href="<?php echo e(route('admin.client.area')); ?>" aria-expanded="true"><i class="ti-control-forward"></i>
-                            <span><?php echo e(__('Client Area')); ?></span></a>
+                            <span><?php echo e(__('Partners Area')); ?></span></a>
                     </li>
                     <?php endif; ?>
 
-                    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('team-member-list')): ?>
+                    <!-- <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('team-member-list')): ?>
                         <li class="main_dropdown <?php echo e(active_menu('admin-home/team-member/all')); ?>">
                             <a href="<?php echo e(route('admin.team.member')); ?>" aria-expanded="true"><i
                                         class="ti-control-forward"></i>
                                 <span><?php echo e(__('Team Members')); ?></span></a>
                         </li>
-                    <?php endif; ?>
+                    <?php endif; ?> -->
 
                 <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->any(['page-list','page-create'])): ?>
                     <li class="main_dropdown <?php if(request()->is(['admin-home/page-edit/*','admin-home/page/all','admin-home/page/new'])): ?> active <?php endif; ?> ">
@@ -224,27 +224,27 @@
                     </li>
                     <?php endif; ?>
 
-                    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('testimonial-list')): ?>
+                    <!-- <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('testimonial-list')): ?>
                         <li class="main_dropdown <?php echo e(active_menu('admin-home/testimonial/all')); ?>">
                             <a href="<?php echo e(route('admin.testimonial')); ?>" aria-expanded="true"><i
                                         class="ti-control-forward"></i>
                                 <span><?php echo e(__('Testimonial')); ?></span></a>
                         </li>
-                    <?php endif; ?>
+                    <?php endif; ?> -->
 
-                    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('counterup-list')): ?>
+                    <!-- <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('counterup-list')): ?>
                         <li class="<?php echo e(active_menu('admin-home/counterup/all')); ?>">
                             <a href="<?php echo e(route('admin.counterup')); ?>"><i class="ti-control-forward"></i>
                                 <span><?php echo e(__('Counterup')); ?></span></a>
                         </li>
-                    <?php endif; ?>
+                    <?php endif; ?> -->
 
 
-                    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->any(['job-list','job-category-list','job-create','job-applicant-list','job-applicant-report','job-settings'])): ?>
+                    <!-- <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->any(['job-list','job-category-list','job-create','job-applicant-list','job-applicant-report','job-settings'])): ?>
                     <li
                             class="main_dropdown <?php if(request()->is(['admin-home/jobs','admin-home/jobs/*'])): ?> active <?php endif; ?> ">
                         <a href="javascript:void(0)" aria-expanded="true">
-                            <i class="ti-package mr-2"></i> <?php echo e(__('Job Post Manage')); ?></a>
+                            <i class="ti-package mr-2"></i> <?php echo e(__('careers Manager')); ?></a>
                         <ul class="collapse">
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('job-list')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/jobs/all')); ?>"><a
@@ -273,7 +273,7 @@
                             <?php endif; ?>
                         </ul>
                     </li>
-                    <?php endif; ?>
+                    <?php endif; ?> -->
 
 
                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->any([
@@ -289,7 +289,7 @@
                 ])): ?>
                      <li class="main_dropdown <?php if(request()->is(['admin-home/events','admin-home/events/*'])): ?> active <?php endif; ?> ">
                         <a href="javascript:void(0)" aria-expanded="true">
-                            <i class="ti-timer mr-2"></i> <?php echo e(__('Events Manage')); ?></a>
+                            <i class="ti-timer mr-2"></i> <?php echo e(__('Events Manager')); ?></a>
                         <ul class="collapse">
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('event-list')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/events')); ?>"><a
@@ -358,7 +358,7 @@
                         <ul class="collapse">
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('donation-list')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/donations')); ?>"><a
-                                            href="<?php echo e(route('admin.donations.all')); ?>"><?php echo e(__('All Causes')); ?></a>
+                                            href="<?php echo e(route('admin.donations.all')); ?>"><?php echo e(__('All Fundraisers')); ?></a>
                                 </li>
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('donation-create')): ?>
@@ -368,12 +368,12 @@
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('donation-category-list')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/donations/category')); ?>"><a
-                                            href="<?php echo e(route('admin.donations.category.all')); ?>"><?php echo e(__('Causes Category')); ?></a>
+                                            href="<?php echo e(route('admin.donations.category.all')); ?>"><?php echo e(__('Fundraisers Category')); ?></a>
                                 </li>
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('donation-pending-cause')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/donations/pending')); ?>"><a
-                                            href="<?php echo e(route('admin.donations.pending.all')); ?>"><?php echo e(__('All Pending Causes')); ?> <span class="badge"><?php echo e($pending_cases_count); ?></span></a>
+                                            href="<?php echo e(route('admin.donations.pending.all')); ?>"><?php echo e(__('All Pending Fundraisers')); ?> <span class="badge"><?php echo e($pending_cases_count); ?></span></a>
                                 </li>
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('donation-withdraw-list')): ?>
@@ -383,12 +383,12 @@
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('donation-payment-list')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/donations/payment-logs')); ?>"><a
-                                            href="<?php echo e(route('admin.donations.payment.logs')); ?>"><?php echo e(__('Causes Payment Logs')); ?></a>
+                                            href="<?php echo e(route('admin.donations.payment.logs')); ?>"><?php echo e(__('Fundraisers Payment Logs')); ?></a>
                                 </li>
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('donation-cause-report')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/donations/report')); ?>">
-                                    <a href="<?php echo e(route('admin.donations.report')); ?>"><?php echo e(__('Causes Report')); ?></a>
+                                    <a href="<?php echo e(route('admin.donations.report')); ?>"><?php echo e(__('Fundraisers Report')); ?></a>
                                 </li>
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('donations-flag-report-list')): ?>
@@ -458,7 +458,7 @@
                                         <?php if(request()->is('admin-home/menu-edit/*')): ?> active <?php endif; ?>
                                                 ">
                                     <a href="javascript:void(0)" aria-expanded="true">
-                                        <?php echo e(__('Menus Manage')); ?></a>
+                                        <?php echo e(__('Menus Manager')); ?></a>
                                     <ul class="collapse">
                                         <li class="<?php echo e(active_menu('admin-home/menu')); ?>"><a
                                                     href="<?php echo e(route('admin.menu')); ?>"><?php echo e(__('All Menus')); ?></a></li>
@@ -473,7 +473,7 @@
                                         <?php if(request()->is('admin-home/widgets/*')): ?> active <?php endif; ?>
                                                 ">
                                     <a href="javascript:void(0)" aria-expanded="true">
-                                        <?php echo e(__('Widgets Manage')); ?></a>
+                                        <?php echo e(__('Widgets Manager')); ?></a>
                                     <ul class="collapse">
                                         <li class="<?php echo e(active_menu('admin-home/widgets')); ?>"><a
                                                     href="<?php echo e(route('admin.widgets')); ?>"><?php echo e(__('All Widgets')); ?></a></li>
@@ -505,7 +505,7 @@
                                 <li class="main_dropdown <?php echo e(active_menu('admin-home/media-upload/page')); ?>">
                                     <a href="<?php echo e(route('admin.upload.media.images.page')); ?>"
                                        aria-expanded="true">
-                                        <?php echo e(__('Media Images Manage')); ?>
+                                        <?php echo e(__('Media Images Manager')); ?>
 
                                     </a>
                                 </li>
@@ -548,7 +548,7 @@
                                         ">
                                     <a href="javascript:void(0)"
                                        aria-expanded="true">
-                                        <?php echo e(__('Home Page Manage')); ?>
+                                        <?php echo e(__('Home Page Manager')); ?>
 
                                     </a>
                                     <ul class="collapse">
@@ -600,7 +600,7 @@
                                                         href="<?php echo e(route('admin.homeone.latest.news')); ?>"><?php echo e(__('Latest News Area')); ?></a>
                                             </li>
                                             <li class="<?php echo e(active_menu('admin-home/home-page-01/section-manage')); ?>">
-                                                <a href="<?php echo e(route('admin.homeone.section.manage')); ?>"><?php echo e(__('Section Manage')); ?></a>
+                                                <a href="<?php echo e(route('admin.homeone.section.manage')); ?>"><?php echo e(__('Section Manager')); ?></a>
                                             </li>
                                         <?php endif; ?>
 
@@ -643,7 +643,7 @@
 
                                                 <li class="<?php echo e(active_menu('admin-home/home-page-04/recent-causes-area')); ?>">
                                                     <a href="<?php echo e(route('admin.home.four.recent.causes.area')); ?>">
-                                                        <?php echo e(__('Recent Causes Area')); ?>
+                                                        <?php echo e(__('Recent Fundraisers Area')); ?>
 
                                                     </a>
                                                 </li>
@@ -656,7 +656,7 @@
                                                 </li>
 
                                                 <li class="<?php echo e(active_menu('admin-home/home-page-04-05-06/section-manage')); ?>">
-                                                    <a href="<?php echo e(route('admin.home.four.five.six.section.manage')); ?>"><?php echo e(__('Section Manage')); ?></a>
+                                                    <a href="<?php echo e(route('admin.home.four.five.six.section.manage')); ?>"><?php echo e(__('Section Manager')); ?></a>
                                                 </li>
                                             <?php endif; ?>
 
@@ -699,7 +699,7 @@
 
                                                 <li class="<?php echo e(active_menu('admin-home/home-page-05/recent-causes-area')); ?>">
                                                     <a href="<?php echo e(route('admin.home.five.recent.causes.area')); ?>">
-                                                        <?php echo e(__('Recent Causes Area')); ?>
+                                                        <?php echo e(__('Recent Fundraisers Area')); ?>
 
                                                     </a>
                                                 </li>
@@ -718,7 +718,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="<?php echo e(active_menu('admin-home/home-page-04-05-06/section-manage')); ?>">
-                                                    <a href="<?php echo e(route('admin.home.four.five.six.section.manage')); ?>"><?php echo e(__('Section Manage')); ?></a>
+                                                    <a href="<?php echo e(route('admin.home.four.five.six.section.manage')); ?>"><?php echo e(__('Section Manager')); ?></a>
                                                 </li>
                                             <?php endif; ?>
 
@@ -755,7 +755,7 @@
 
                                                 <li class="<?php echo e(active_menu('admin-home/home-page-06/recent-causes-area')); ?>">
                                                     <a href="<?php echo e(route('admin.home.six.recent.causes.area')); ?>">
-                                                        <?php echo e(__('Recent Causes Area')); ?>
+                                                        <?php echo e(__('Recent Fundraisers Area')); ?>
 
                                                     </a>
                                                 </li>
@@ -781,7 +781,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="<?php echo e(active_menu('admin-home/home-page-04-05-06/section-manage')); ?>">
-                                                    <a href="<?php echo e(route('admin.home.four.five.six.section.manage')); ?>"><?php echo e(__('Section Manage')); ?></a>
+                                                    <a href="<?php echo e(route('admin.home.four.five.six.section.manage')); ?>"><?php echo e(__('Section Manager')); ?></a>
                                                 </li>
                                             <?php endif; ?>
                                     </ul>
@@ -792,11 +792,11 @@
                                 <li class="main_dropdown <?php if(request()->is('admin-home/about-page/*')  ): ?> active <?php endif; ?> ">
                                     <a href="javascript:void(0)"
                                        aria-expanded="true">
-                                        <?php echo e(__('About Page Manage')); ?>
+                                        <?php echo e(__('About Page')); ?>
 
                                     </a>
                                     <ul class="collapse">
-                                        <li class="<?php echo e(active_menu('admin-home/about-page/about-us')); ?>"><a
+                                        <!-- <li class="<?php echo e(active_menu('admin-home/about-page/about-us')); ?>"><a
                                                     href="<?php echo e(route('admin.about.page.about')); ?>"><?php echo e(__('About Us Section')); ?></a>
                                         </li>
                                         <li class="<?php echo e(active_menu('admin-home/about-page/our-mission')); ?>"><a
@@ -804,32 +804,32 @@
                                         </li>
                                         <li class="<?php echo e(active_menu('admin-home/about-page/counterup')); ?>"><a
                                                     href="<?php echo e(route('admin.about.counterup')); ?>"><?php echo e(__('Counterup Section')); ?></a>
-                                        </li>
+                                        </li> -->
                                         <li class="<?php echo e(active_menu('admin-home/about-page/what-we-do')); ?>"><a
                                                     href="<?php echo e(route('admin.about.what.we.do')); ?>"><?php echo e(__('What We Do Section')); ?></a>
                                         </li>
                                         <li class="<?php echo e(active_menu('admin-home/about-page/testimonial')); ?>"><a
                                                     href="<?php echo e(route('admin.about.testimonial')); ?>"><?php echo e(__('Testimonial Section')); ?></a>
                                         </li>
-                                        <li class="<?php echo e(active_menu('admin-home/about-page/team-member')); ?>"><a
+                                        <!-- <li class="<?php echo e(active_menu('admin-home/about-page/team-member')); ?>"><a
                                                     href="<?php echo e(route('admin.about.team.member')); ?>"><?php echo e(__('Team Member Section')); ?></a>
-                                        </li>
+                                        </li> -->
                                         <li class="<?php echo e(active_menu('admin-home/about-page/section-manage')); ?>"><a
-                                                    href="<?php echo e(route('admin.about.page.section.manage')); ?>"><?php echo e(__('Section Manage')); ?></a>
+                                                    href="<?php echo e(route('admin.about.page.section.manage')); ?>"><?php echo e(__('Section Manager')); ?></a>
                                         </li>
                                     </ul>
                                 </li>
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('page-settings-event-page-manage')): ?>
                                 <li class="main_dropdown <?php if(request()->is('admin-home/events/page-manage')  ): ?> active <?php endif; ?> ">
-                                    <a href="javascript:void(0)"
+                                    <!-- <a href="javascript:void(0)"
                                        aria-expanded="true">
-                                        <?php echo e(__('Events Page Manage')); ?>
+                                        <?php echo e(__('Events Page Manager')); ?>
 
-                                    </a>
+                                    </a> -->
                                     <ul class="collapse">
                                         <li class="<?php echo e(active_menu('admin-home/events/page-manage')); ?>"><a
-                                                    href="<?php echo e(route('admin.event.page.manage')); ?>"><?php echo e(__('Page Manage')); ?></a>
+                                                    href="<?php echo e(route('admin.event.page.manage')); ?>"><?php echo e(__('Page Manager')); ?></a>
                                         </li>
                                     </ul>
                                 </li>
@@ -838,21 +838,21 @@
                                 <li class="main_dropdown <?php if(request()->is('admin-home/contact-page/*')  ): ?> active <?php endif; ?>">
                                     <a href="javascript:void(0)"
                                        aria-expanded="true">
-                                        <?php echo e(__('Contact Page Manage')); ?>
+                                        <?php echo e(__('Contact Page')); ?>
 
                                     </a>
                                     <ul class="collapse">
-                                        <li class="<?php echo e(active_menu('admin-home/contact-page/contact-info')); ?>">
+                                        <!-- <li class="<?php echo e(active_menu('admin-home/contact-page/contact-info')); ?>">
                                             <a href="<?php echo e(route('admin.contact.info')); ?>"><?php echo e(__('Contact Info')); ?></a>
                                         </li>
                                         <li class="<?php echo e(active_menu('admin-home/contact-page/form-area')); ?>">
                                             <a href="<?php echo e(route('admin.contact.page.form.area')); ?>"><?php echo e(__('Form Area')); ?></a>
-                                        </li>
-                                        <li class="<?php echo e(active_menu('admin-home/contact-page/map')); ?>">
+                                        </li> -->
+                                        <!-- <li class="<?php echo e(active_menu('admin-home/contact-page/map')); ?>">
                                             <a href="<?php echo e(route('admin.contact.page.map')); ?>"><?php echo e(__('Google Map Area')); ?></a>
-                                        </li>
+                                        </li> -->
                                         <li class="<?php echo e(active_menu('admin-home/contact-page/section-manage')); ?>">
-                                            <a href="<?php echo e(route('admin.contact.page.section.manage')); ?>"><?php echo e(__('Section Manage')); ?></a>
+                                            <a href="<?php echo e(route('admin.contact.page.section.manage')); ?>"><?php echo e(__('Sections Manager')); ?></a>
                                         </li>
                                     </ul>
                                 </li>
@@ -861,21 +861,21 @@
                                 <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('page-settings-success-story-page-manage')): ?>
                                 <li class="main_dropdown <?php echo e(active_menu('admin-home/success-story-page-manage')); ?>">
                                     <a href="<?php echo e(route('admin.success.story.page.manage')); ?>" aria-expanded="true">
-                                        <?php echo e(__('Success Story Page Manage')); ?></a>
+                                        <?php echo e(__('Success Story Page')); ?></a>
                                 </li>
                                 <?php endif; ?>
 
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('page-settings-error-page-manage')): ?>
                                 <li class="main_dropdown <?php echo e(active_menu('admin-home/404-page-manage')); ?>">
                                     <a href="<?php echo e(route('admin.404.page.settings')); ?>" aria-expanded="true">
-                                        <?php echo e(__('404 Page Manage')); ?></a>
+                                        <?php echo e(__('404 Error Page')); ?></a>
                                 </li>
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('page-settings-maintain-page-manage')): ?>
                                 <li class="main_dropdown <?php echo e(active_menu('admin-home/maintains-page/settings')); ?>">
                                     <a href="<?php echo e(route('admin.maintains.page.settings')); ?>"
                                        aria-expanded="true">
-                                        <?php echo e(__('Maintain Page Manage')); ?>
+                                        <?php echo e(__('Maintainance Mode')); ?>
 
                                     </a>
                                 </li>
@@ -924,48 +924,48 @@
                                             href="<?php echo e(route('admin.general.color.settings')); ?>"><?php echo e(__('Color Settings')); ?></a>
                                 </li>
                             <?php endif; ?>
-                            <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('general-settings-typography')): ?>
+                            <!-- <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('general-settings-typography')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/general-settings/typography-settings')); ?>"><a
                                             href="<?php echo e(route('admin.general.typography.settings')); ?>"><?php echo e(__('Typography Settings')); ?></a>
                                 </li>
-                            <?php endif; ?>
+                            <?php endif; ?> -->
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('general-settings-seo-settings')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/general-settings/seo-settings')); ?>"><a
-                                            href="<?php echo e(route('admin.general.seo.settings')); ?>"><?php echo e(__('SEO Settings')); ?></a>
+                                            href="<?php echo e(route('admin.general.seo.settings')); ?>"><?php echo e(__('SEO Manager')); ?></a>
                                 </li>
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('general-settings-third-party-script')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/general-settings/scripts')); ?>"><a
-                                            href="<?php echo e(route('admin.general.scripts.settings')); ?>"><?php echo e(__('Third Party Scripts')); ?></a>
+                                            href="<?php echo e(route('admin.general.scripts.settings')); ?>"><?php echo e(__('Third Party Code')); ?></a>
                                 </li>
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('general-settings-email-template')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/general-settings/email-template')); ?>"><a
-                                            href="<?php echo e(route('admin.general.email.template')); ?>"><?php echo e(__('Email Template')); ?></a>
+                                            href="<?php echo e(route('admin.general.email.template')); ?>"><?php echo e(__('Email Templates')); ?></a>
                                 </li>
                                 <li class="<?php echo e(active_menu('admin-home/general-settings/email-settings')); ?>"><a
-                                            href="<?php echo e(route('admin.general.email.settings')); ?>"><?php echo e(__('Email Settings')); ?></a>
+                                            href="<?php echo e(route('admin.general.email.settings')); ?>"><?php echo e(__('Email Config')); ?></a>
                                 </li>
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('general-settings-smtp-settings')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/general-settings/smtp-settings')); ?>"><a
-                                            href="<?php echo e(route('admin.general.smtp.settings')); ?>"><?php echo e(__('SMTP Settings')); ?></a>
+                                            href="<?php echo e(route('admin.general.smtp.settings')); ?>"><?php echo e(__('SMTP Manager')); ?></a>
                                 </li>
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('general-settings-regenerate-media-image')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/general-settings/regenerate-image')); ?>"><a
-                                            href="<?php echo e(route('admin.general.regenerate.thumbnail')); ?>"><?php echo e(__('Regenerate Media Image')); ?></a>
+                                            href="<?php echo e(route('admin.general.regenerate.thumbnail')); ?>"><?php echo e(__('Regenerate Media')); ?></a>
                                 </li>
                             <?php endif; ?>
-                            <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('general-settings-page-settings')): ?>
+                            <!-- <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('general-settings-page-settings')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/general-settings/page-settings')); ?>"><a
                                             href="<?php echo e(route('admin.general.page.settings')); ?>"><?php echo e(__('Page Settings')); ?></a>
                                 </li>
-                            <?php endif; ?>
+                            <?php endif; ?> -->
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('general-settings-payment-gateway')): ?>
                                 <?php if(!empty(get_static_option('site_payment_gateway'))): ?>
                                     <li class="<?php echo e(active_menu('admin-home/general-settings/payment-settings')); ?>"><a
-                                                href="<?php echo e(route('admin.general.payment.settings')); ?>"><?php echo e(__('Payment Gateway Settings')); ?></a>
+                                                href="<?php echo e(route('admin.general.payment.settings')); ?>"><?php echo e(__('Payment Processor')); ?></a>
                                     </li>
                                 <?php endif; ?>
                             <?php endif; ?>
@@ -979,23 +979,23 @@
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('general-settings-cache-settings')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/general-settings/cache-settings')); ?>"><a
-                                            href="<?php echo e(route('admin.general.cache.settings')); ?>"><?php echo e(__('Cache Settings')); ?></a>
+                                            href="<?php echo e(route('admin.general.cache.settings')); ?>"><?php echo e(__('Cache Manager')); ?></a>
                                 </li>
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('general-settings-gdpr-settings')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/general-settings/gdpr-settings')); ?>"><a
-                                            href="<?php echo e(route('admin.general.gdpr.settings')); ?>"><?php echo e(__('GDPR Compliant Cookies Settings')); ?></a>
+                                            href="<?php echo e(route('admin.general.gdpr.settings')); ?>"><?php echo e(__('GDPR Settings')); ?></a>
                                 </li>
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('general-settings-sitemap')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/general-settings/sitemap-settings')); ?>"><a
-                                            href="<?php echo e(route('admin.general.sitemap.settings')); ?>"><?php echo e(__('Sitemap Settings')); ?></a>
+                                            href="<?php echo e(route('admin.general.sitemap.settings')); ?>"><?php echo e(__('SEO sitemap')); ?></a>
                                 </li>
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('general-settings-rss-feed')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/general-settings/rss-settings')); ?>"><a
 
-                                            href="<?php echo e(route('admin.general.rss.feed.settings')); ?>"><?php echo e(__('RSS Feed Settings')); ?></a>
+                                            href="<?php echo e(route('admin.general.rss.feed.settings')); ?>"><?php echo e(__('External feed')); ?></a>
                                 </li>
                             <?php endif; ?>
                                 <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('general-settings-database-upgrade')): ?>
@@ -1005,7 +1005,7 @@
                                 <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('general-settings-license')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/general-settings/license-setting')); ?>"><a
-                                            href="<?php echo e(route('admin.general.license.settings')); ?>"><?php echo e(__('Licence Settings')); ?></a>
+                                            href="<?php echo e(route('admin.general.license.settings')); ?>"><?php echo e(__('AltdreamKey')); ?></a>
                                 </li>
                             <?php endif; ?>
                         </ul>

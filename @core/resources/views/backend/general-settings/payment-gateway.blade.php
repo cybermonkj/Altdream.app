@@ -14,7 +14,7 @@
                 @include('backend.partials.message')
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="header-title">{{__("Payment Gateway Settings")}}</h4>
+                        <h4 class="header-title">{{__("Payment Processor Settings")}}</h4>
                         @include('backend/partials/error')
                         <form action="{{route('admin.general.payment.settings')}}" method="POST"
                               enctype="multipart/form-data">
@@ -43,7 +43,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="site_default_payment_gateway">{{__('Default Payment Gateway')}}</label>
+                                        <label for="site_default_payment_gateway">{{__('Default Payment Processor')}}</label>
                                         <select name="site_default_payment_gateway" class="form-control" >
                                             @php
                                                 $all_gateways = ['paypal','manual_payment','mollie','paytm','stripe','razorpay','flutterwave','paystack'];

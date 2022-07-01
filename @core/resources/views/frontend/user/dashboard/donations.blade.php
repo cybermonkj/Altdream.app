@@ -23,7 +23,7 @@
                                     </h5>
                                     <small class="d-block"><strong>{{get_static_option('donation_page_name')}} {{__('ID:')}}</strong> #{{$data->id}}</small>
                                     <small class="d-block"><strong>{{__('Amount:')}}</strong> {{amount_with_currency_symbol($data->amount)}}</small>
-                                    <small class="d-block"><strong>{{__('Payment Gateway:')}}</strong> {{str_replace('_',' ',__($data->payment_gateway))}}</small>
+                                    <small class="d-block"><strong>{{__('Payment Processor:')}}</strong> {{str_replace('_',' ',__($data->payment_gateway))}}</small>
                                     <small class="d-block"><strong>{{__('Date:')}}</strong> {{date_format($data->created_at,'d M Y')}}</small>
                                     @if(!empty($data->donation) && $data->status == 'complete')
                                         <form action="{{route('frontend.donation.invoice.generate')}}"  method="post">

@@ -70,7 +70,7 @@
                                    <th>{{__('Billing Email')}}</th>
                                    <th>{{__('Package Name')}}</th>
                                    <th>{{__('Package Price')}}</th>
-                                   <th>{{__('Payment Gateway')}}</th>
+                                   <th>{{__('Payment Processor')}}</th>
                                    <th>{{__('Payment Status')}}</th>
                                    <th>{{__('Transaction ID')}}</th>
                                    <th>{{__('Date')}}</th>

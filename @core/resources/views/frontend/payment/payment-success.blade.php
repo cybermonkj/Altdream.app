@@ -1,6 +1,6 @@
 @extends('frontend.frontend-page-master')
 @section('page-title')
-    {{__('Payment Success For:')}} {{$order_details->package_name}}
+    {{__('Payment was a success For:')}} {{$order_details->package_name}}
 @endsection
 @section('content')
     <div class="error-page-content padding-120">
@@ -15,10 +15,10 @@
                 <div class="col-lg-6">
                     <h2 class="billing-title">{{__('Billing Details')}}</h2>
                     <ul class="billing-details">
-                        <li><strong>{{__('Order ID')}}</strong> #{{$order_details->id}}</li>
+                        <!-- <li><strong>{{__('Order ID')}}</strong> #{{$order_details->id}}</li>
                         <li><strong>{{__('Name')}}</strong> {{$payment_details->name}}</li>
-                        <li><strong>{{__('Email')}}</strong> {{$payment_details->email}}</li>
-                        <li><strong>{{__('Payment Method')}}</strong> {{str_replace('_',' ',$payment_details->package_gateway)}}</li>
+                        <li><strong>{{__('Email')}}</strong> {{$payment_details->email}}</li> -->
+                        <li><strong>{{__('Payment Processor')}}</strong> {{str_replace('_',' ',$payment_details->package_gateway)}}</li>
                         <li><strong>{{__('Payment Status')}}</strong> {{$payment_details->status}}</li>
                         <li><strong>{{__('Transaction id')}}</strong> {{$payment_details->transaction_id}}</li>
                     </ul>

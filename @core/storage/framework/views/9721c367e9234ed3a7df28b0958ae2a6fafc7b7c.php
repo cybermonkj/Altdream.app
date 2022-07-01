@@ -63,22 +63,22 @@
           <div class="col-lg-6">
             <div class="card margin-top-40">
                 <div class="smart-card">
-                    <h4 class="title"><?php echo e(__('Recent Donation Logs')); ?></h4>
+                    <h4 class="title"><?php echo e(__('Recent Fundraiser Logs')); ?></h4>
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
-                            <th><?php echo e(__('Donation ID')); ?></th>
+                            <th><?php echo e(__('Fundraiser ID')); ?></th>
                             <th><?php echo e(__('Amount')); ?></th>
-                            <th><?php echo e(__('Payment Gateway')); ?></th>
+                            <!-- <th><?php echo e(__('Payment Gateway')); ?></th> -->
                             <th><?php echo e(__('Payment Status')); ?></th>
-                            <th><?php echo e(__('Date')); ?></th>
+                            <!-- <th><?php echo e(__('Date')); ?></th> -->
                             </thead>
                             <tbody>
                             <?php $__currentLoopData = $causes_recent; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <tr>
                                     <td>#<?php echo e($data->id); ?></td>
                                     <td><?php echo e(amount_with_currency_symbol($data->amount)); ?></td>
-                                    <td><?php echo e(str_replace('_',' ',$data->payment_gateway)); ?></td>
+                                    <!-- <td><?php echo e(str_replace('_',' ',$data->payment_gateway)); ?></td> -->
                                     <td>
                                         <?php $pay_status = $data->status; ?>
                                         <?php if($pay_status == 'complete'): ?>
@@ -87,7 +87,7 @@
                                             <span class="alert alert-warning"><?php echo e($pay_status); ?></span>
                                         <?php endif; ?>
                                     </td>
-                                    <td><?php echo e(date_format($data->created_at,'d M Y h:i:s')); ?></td>
+                                    <!-- <td><?php echo e(date_format($data->created_at,'d M Y h:i:s')); ?></td> -->
                                 </tr>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </tbody>
@@ -104,15 +104,15 @@
                         <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
-                                <th><?php echo e(__('Attendance ID')); ?></th>
+                                <!-- <th><?php echo e(__('Attendance ID')); ?></th> -->
                                 <th><?php echo e(__('Event Name')); ?></th>
                                 <th><?php echo e(__('Payment Status')); ?></th>
-                                <th><?php echo e(__('Date')); ?></th>
+                                <!-- <th><?php echo e(__('Date')); ?></th> -->
                                 </thead>
                                 <tbody>
                                 <?php $__currentLoopData = $event_attendance_recent_order; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <tr>
-                                        <td>#<?php echo e($data->id); ?></td>
+                                        <!-- <td>#<?php echo e($data->id); ?></td> -->
                                         <td><?php echo e($data->event_name); ?></td>
 
                                         <td>
@@ -123,7 +123,7 @@
                                                 <span class="alert alert-warning"><?php echo e($pay_status); ?></span>
                                             <?php endif; ?>
                                         </td>
-                                        <td><?php echo e(date_format($data->created_at,'d M Y h:i:s')); ?></td>
+                                        <!-- <td><?php echo e(date_format($data->created_at,'d M Y h:i:s')); ?></td> -->
                                     </tr>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </tbody>

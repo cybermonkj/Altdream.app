@@ -23,7 +23,7 @@
                             <ul>
                                 <li><strong>{{__("Cause")}}:</strong> {{$data->cause->title}}</li>
                                 <li><strong>{{__("Amount")}}:</strong> {{amount_with_currency_symbol($data->withdraw_request_amount)}}</li>
-                                <li><strong>{{__("Payment Gateway")}}:</strong> {{$data->payment_gateway}}</li>
+                                <li><strong>{{__("Payment Processor")}}:</strong> {{$data->payment_gateway}}</li>
                                 @php
                                     $withdraw_able_amount_without_admin_charge = optional($data->cause)->raised - optional($data->cause)->withdraws->where('payment_status' , 'approved')->pluck('withdraw_request_amount')->sum();
                                    $charge_text = '';
@@ -79,7 +79,7 @@
                                 <div id="withdraw_able_amount_wrap"></div>
                             </div>
                             <div class="form-group">
-                                <label for="edit_name">{{__('Payment Gateway')}}</label>
+                                <label for="edit_name">{{__('Payment Processor')}}</label>
                                 <select class="form-control" name="payment_gateway">
                                     {!! render_payment_gateway_select() !!}
                                 </select>

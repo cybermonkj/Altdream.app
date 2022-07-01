@@ -1,4 +1,4 @@
-APP_NAME=Fundorex
+APP_NAME=Altdream
 APP_ENV=production
 APP_KEY=base64:8e5wSFpua5CzuHhXJEaJHcpRFBR2nqLAV0zTURuXgLA=
 APP_DEBUG=false

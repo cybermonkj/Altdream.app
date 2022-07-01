@@ -1,6 +1,6 @@
 @extends('backend.admin-master')
 @section('site-title')
-    {{__('License Settings')}}
+    {{__('Altdream Key')}}
 @endsection
 @section('content')
     <div class="col-lg-12 col-ml-12 padding-bottom-30">

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <title>{{__('Donations Invoice')}}</title>
+    <title>{{__('Donation Reciept')}}</title>
     <style>
 
         body * {
@@ -190,7 +190,7 @@
                     <td>{{amount_with_currency_symbol($donation_details->amount,true)}}</td>
                 </tr>
                 <tr>
-                    <th>{{__('Payment Gateway')}}</th>
+                    <th>{{__('Payment Processor')}}</th>
                     <td>{{str_replace('_',' ',$donation_details->payment_gateway)}}</td>
                 </tr>
                 <tr>

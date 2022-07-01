@@ -179,7 +179,7 @@
                     <li><strong>{{__('Attendance ID')}}:</strong> #{{$data->id}}</li>
                     <li><strong>{{__('Name')}}:</strong> {{$payment->name}}</li>
                     <li><strong>{{__('Email')}}:</strong> {{$payment->email}}</li>
-                    <li><strong>{{__('Payment Method')}}:</strong>  {{str_replace('_',' ',$payment->package_gateway)}}</li>
+                    <li><strong>{{__('Payment Processor')}}:</strong>  {{str_replace('_',' ',$payment->package_gateway)}}</li>
                     <li><strong>{{__('Payment Status')}}:</strong> {{$payment->status}}</li>
                     <li><strong>{{__('Transaction id')}}:</strong> {{$payment->transaction_id}}</li>
                 </ul>

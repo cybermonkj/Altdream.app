@@ -21,7 +21,7 @@
                         <li><strong>{{__('Applicant ID')}}:</strong> #{{$applicant_details->id}}</li>
                         <li><strong>{{__('Name')}}:</strong> {{$applicant_details->name}}</li>
                         <li><strong>{{__('Email')}}:</strong> {{$applicant_details->email}}</li>
-                        <li><strong>{{__('Payment Method')}}:</strong> {{str_replace('_',' ',$applicant_details->payment_gateway)}}</li>
+                        <li><strong>{{__('Payment Processor')}}:</strong> {{str_replace('_',' ',$applicant_details->payment_gateway)}}</li>
                         <li><strong>{{__('Payment Status')}}:</strong> {{$applicant_details->payment_status}}</li>
                         <li><strong>{{__('Transaction id')}}:</strong> {{$applicant_details->transaction_id}}</li>
                     </ul>

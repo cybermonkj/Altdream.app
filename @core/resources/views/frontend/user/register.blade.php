@@ -8,7 +8,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="login-form-wrapper">
-                        <h2 class="text-center">{{__('Register New Account')}}</h2><br>
+                        <h2 class="text-center">{{__('Signup')}}</h2><br>
                         @include('backend.partials.message')
                         @if($errors->any())
                             <div class="alert alert-danger">

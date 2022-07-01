@@ -8,7 +8,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="order-confirm-area">
-                        <h4 class="title">{{__('Attendance Confirm')}}</h4>
+                        <h4 class="title">{{__('Attendance Confirmation')}}</h4>
                         @if($errors->any())
                             <ul class="alert alert-danger">
                                 @foreach($errors->all() as $error)
@@ -64,7 +64,7 @@
                                     <td>{{$attendance_details->quantity}}</td>
                                 </tr>
                                 <tr>
-                                    <td>{{__('Payment Gateway')}}</td>
+                                    <td>{{__('Payment Processor')}}</td>
                                     <td class="text-capitalize">
                                         @if($payment_gateway == 'manual_payment')
                                             {{get_static_option('site_manual_payment_name')}}

@@ -58,7 +58,7 @@
                 {!! render_image_markup_by_attachment_id(get_static_option('site_white_logo'),'full') !!}
             </a>
         </div>
-        <p>{{__('You Have Get In Touch Message From '. get_static_option('site_title'))}}</p>
+        <p>{{__('You Have a Message From '. get_static_option('site_title'))}}</p>
         <table>
             @foreach($data as $key => $field)
                 @php $name = str_replace('-',' ',$key); @endphp
