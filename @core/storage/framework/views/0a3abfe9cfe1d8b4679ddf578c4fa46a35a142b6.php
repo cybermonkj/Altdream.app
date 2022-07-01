@@ -1,0 +1,1 @@
+<?php /**PATH /home/cybermonkj/Altdream.app/@core/resources/views/frontend/partials/breadcrumb.blade.php ENDPATH**/ ?>
